@@ -1,0 +1,8 @@
+.mySwiper .swiper-pagination-bullet {
+    background-color: #500000; /* Cor dos bullets */
+  }
+  
+  .mySwiper .swiper-pagination-bullet-active {
+    background-color: white; /* Cor do bullet ativo */
+  }
+  

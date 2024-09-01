@@ -1,0 +1,34 @@
+
+  
+  .timeline-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .timeline-element-content {
+    padding: 16px;
+  }
+  
+  
+  .timeline-element-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .timeline-element-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .timeline-element p {
+    margin-bottom: 10px;
+  }
+  
+  .timeline-element-date {
+    font-size: 12px;
+    text-align: right;
+    color: black;
+  }
+  
