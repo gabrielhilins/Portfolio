@@ -30,6 +30,7 @@ import Footer from "../components/Footer";
 import MockupRec from "../img/Mockup RecDaTerra.png";
 import MockupMarvel from "../img/Mockup Marvel.png";
 import MockupCaremind from "../img/Mockup Caremind.png";
+import MockupPorfolio from '../img/Mockup Porfolio.png'
 import MockupINEP from "../img/Mockup INEP.png";
 
 /*Importação da estilização da Paginação do Swiper*/
@@ -121,7 +122,7 @@ const Projects = () => {
         },
       ],
       teamMembers:
-        "Arthur Vinícius, Cecília Sitcovisky, Gabriel Henrique, Matheus Vinícius e Yuri Catunda",
+      "Arthur Vinícius, Cecília Sitcovisky, Gabriel Henrique, Matheus Vinícius e Yuri Catunda",
       projectWebsite: "https://rec-da-terra-front-end.vercel.app/",
       repo: "https://github.com/SIN-disciplina-PI3/RecDaTerra_FrontEnd",
     },
@@ -164,9 +165,48 @@ const Projects = () => {
         },
       ],
       teamMembers:
-        "Arthur Vinícius, Gabriel Henrique, Luiz Henrique & Yuri Catunda",
+      "Arthur Vinícius, Gabriel Henrique, Luiz Henrique & Yuri Catunda",
       projectWebsite: "https://projeto-dashboard-inep.vercel.app/index.html",
       repo: "https://github.com/gabrielhilins/Projeto-Dashboard-Inep",
+    },
+    {
+      title: t("portfolio"),
+      description: t("nameProject"),
+      summary: t("summaryPortfolio"),
+      imageSrc: MockupPorfolio,
+      imageAlt: "Mockup do meu Portfolio",
+      techUsed: [
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+          alt: "React",
+          width: "30px", // Ajustado para responsividade
+          description: "React",
+        },
+        
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+          alt: "Vite",
+          width: "30px", // Ajustado para responsividade
+          description: "Vite",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg",
+          alt: "Vercel",
+          width: "30px", // Ajustado para responsividade
+          description: "Vercel",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg",
+          alt: "Figma",
+          width: "30px", // Ajustado para responsividade
+          description: "Figma",
+        },
+        
+      ],
+      teamMembers:
+        "Gabriel Henrique",
+      projectWebsite: "https://portfolio-gabriel-henriques-projects.vercel.app/",
+      repo: "https://github.com/gabrielhilins/Portfolio",
     },
   ];
 
@@ -366,6 +406,7 @@ const Projects = () => {
               width={{ base: "80%", md: "100%" }} // Ajustado para responsividade
               maxWidth="500px"
               height="auto"
+              
             />
           </Box>
         </Box>

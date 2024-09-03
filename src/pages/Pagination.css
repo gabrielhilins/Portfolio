@@ -6,7 +6,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #6C63FF; /* Cor das bolinhas ativas */
+  background-color: #ff28b0; /* Cor das bolinhas ativas */
   opacity: 1; /* Opacidade total da bolinha ativa */
   transform: scale(1.2); /* Aumenta a bolinha ativa */
 }

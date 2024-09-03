@@ -9,6 +9,11 @@ function Talk() {
   const { colorMode } = useColorMode();
   const { t } = useTranslation();
 
+  // Defina o gradiente com base no modo de cor atual
+  const contactBackground = colorMode === 'dark'
+    ? 'linear-gradient(to bottom, #780E0E, #322AB2)'
+    : 'linear-gradient(to bottom, #DB4F4F, #6C63FF)';
+
   return (
     <div className="container">
       <div className="title">{t("talkWithMe")}</div>
@@ -43,7 +48,6 @@ function Talk() {
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            
             boxShadow="0px 4px 10px rgba(0, 0, 0, 0.25)"
             order={{ base: 1, md: 1 }} // Coloca o formulário primeiro
           >
@@ -62,7 +66,7 @@ function Talk() {
           <Box
             width="100%"
             minHeight="300px" // Altura mínima
-            background="linear-gradient(to right, #DB4F4F, #6C63FF)"
+            background={contactBackground} // Gradiente condicional
             display="flex"
             flexDirection="column"
             alignItems="center"
