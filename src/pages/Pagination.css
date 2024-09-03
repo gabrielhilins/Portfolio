@@ -1,0 +1,12 @@
+.swiper-pagination-bullet {
+  background-color: #E0E0FF; /* Cor padrão das bolinhas */
+  width: 10px; /* Largura das bolinhas */
+  height: 10px; /* Altura das bolinhas */
+  opacity: 0.7; /* Opacidade das bolinhas */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #6C63FF; /* Cor das bolinhas ativas */
+  opacity: 1; /* Opacidade total da bolinha ativa */
+  transform: scale(1.2); /* Aumenta a bolinha ativa */
+}

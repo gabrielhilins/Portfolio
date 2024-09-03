@@ -1,12 +1,15 @@
+/*Importação de Módulos e seus componentees*/
 import { useEffect, useState} from "react";
 import { Box, Flex, useColorMode, Image, Text, VStack, Button, Icon, useColorModeValue } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/swiper-bundle.css';
 import { PiCertificate } from "react-icons/pi";
-import ToolBar from "../components/ToolBar";
-import Footer from "../components/Footer";
 import { useTranslation } from "react-i18next";
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
+
+/*Importação dos Componentes*/
+import ToolBar from "../components/ToolBar";
+import Footer from "../components/Footer";
 
 /*Importacao Imagens dos Certificados*/
 import BootcampSantander from '../img/Certificado Bootcamp Santander.png';
@@ -17,6 +20,9 @@ import Junit from '../img/Certificado Junit.png'
 import Python from '../img/Certificado Python.png'
 import Git from '../img/Certificado Git.png'
 import Poo from '../img/Certificado Fundamentos POO.png'
+
+/*Importação da estilização da Paginação do Swiper*/
+import './Pagination.css'
 
 const Certificates = () => {
   const { t } = useTranslation();

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import ToolBar from "../components/ToolBar";
 import Footer from "../components/Footer";
-import { Box, VStack, Image, useColorMode } from '@chakra-ui/react'; // Importando useColorMode
+import { Box, VStack, Image, useColorMode } from '@chakra-ui/react'; 
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Cesar from '../img/cesar.png';
@@ -10,13 +10,14 @@ import Rec from '../img/rec_n_play_logo 1.png';
 import Tpf from '../img/tpfengenharia_logo 1.png';
 import Cmr from '../img/CMR.png';
 import './Experiences.css';
+import './Pagination.css'
 
 const Timeline = () => {
-  const { colorMode } = useColorMode(); // Obtendo o colorMode
+  const { colorMode } = useColorMode(); 
   const {t } = useTranslation();
 
   const dateStyle = {
-    color: colorMode === "light" ? "black" : "white" // Cor do texto da data
+    color: colorMode === "light" ? "black" : "white" 
   };
 
   return (
@@ -32,9 +33,9 @@ const Timeline = () => {
               className="timeline-icon"
             />}
             contentStyle={{
-              background: colorMode === "light" ? "white" : "#333", // Ajuste de fundo baseado no colorMode
-              color: colorMode === "light" ? "black" : "white",   // Ajuste de texto baseado no colorMode
-              border: colorMode === "light" ? "2px solid black" : "2px solid white" // Adicionando uma borda
+              background: colorMode === "light" ? "white" : "#333",
+              color: colorMode === "light" ? "black" : "white",   
+              border: colorMode === "light" ? "2px solid black" : "2px solid white" 
             }}
             contentArrowStyle={{
               borderRight: colorMode === "light" ? "7px solid white" : "7px solid #333"
@@ -143,7 +144,7 @@ const Timeline = () => {
             <div className="timeline-element-content">
               <h3 className="timeline-element-title">{t("ensino_medio")}</h3>
               <h4 className="timeline-element-subtitle">{t("cmr")}</h4>
-              <p>{t("wor_presentation")}</p>
+              <p>{t("work_presentation")}</p>
               <span className="timeline-element-date" style={dateStyle}>01/2020 - 12/2022</span>
             </div>
           </VerticalTimelineElement>
@@ -160,8 +161,8 @@ const Experiences = () => {
   return (
     <div className="container">
         <div className="title">{t("experiences")}</div>
-        <Box width="100%" maxWidth="1400px" minWidth="320px" mx="auto" px={4} py={8}>
         <ToolBar />
+        <Box width="100%" maxWidth="1400px" minWidth="320px" mx="auto" px={4} py={8}>
         <Timeline />
         <Footer />
     </Box>

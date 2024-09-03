@@ -119,7 +119,7 @@ function Home() {
             gap="35px" // Adiciona um espaçamento entre os ícones
             animation="floating 4s ease-in-out infinite"
           >
-            <Tooltip label={t('linkedin')} aria-label={t('linkedin')}>
+            <Tooltip label={t('linkedin')} aria-label={t('linkedin')} placement="bottom">
               <Link
                 href="https://www.linkedin.com/in/gabriel-henrique-lins/"
                 isExternal
@@ -134,7 +134,7 @@ function Home() {
               </Link>
             </Tooltip>
 
-            <Tooltip label={t('github')} aria-label={t('github')}>
+            <Tooltip label={t('github')} aria-label={t('github')} placement="bottom">
               <Link
                 href="https://github.com/gabrielhilins"
                 isExternal
@@ -149,7 +149,7 @@ function Home() {
               </Link>
             </Tooltip>
 
-            <Tooltip label={t('viewResume')} aria-label={t('viewResume')}>
+            <Tooltip label={t('viewResume')} aria-label={t('viewResume')} placement="bottom">
               <Button
                 onClick={onOpen}
                 variant="link"

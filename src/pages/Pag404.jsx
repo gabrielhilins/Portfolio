@@ -1,6 +1,7 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 
 function Pag404() {
   const { t } = useTranslation();
@@ -21,6 +22,7 @@ function Pag404() {
       bg="#f8f9fa"
       padding="2rem"
     >
+      <LanguageSwitcher />
       <Text fontSize="6xl" fontWeight="bold" color="#500000">
         404
       </Text>

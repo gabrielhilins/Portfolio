@@ -20,7 +20,6 @@ import { useNavigate } from "react-router-dom"; // Import para navegação
 import { IoPersonOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { MdLabelImportantOutline } from "react-icons/md";
-import { MdOutlineMessage } from "react-icons/md";
 
 const ContactForm = () => {
   const [name, setName] = useState("");

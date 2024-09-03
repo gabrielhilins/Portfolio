@@ -33,7 +33,7 @@ const TechLogos = () => {
       justifyContent="center"
     >
       {techLogos.map((tech, index) => (
-        <Tooltip key={index} label={tech.description} aria-label={tech.description}>
+        <Tooltip key={index} label={tech.description} aria-label={tech.description} placement="top">
           <Box
             width={{ base: "100%", sm: "48%" }}
             borderRadius="15px"

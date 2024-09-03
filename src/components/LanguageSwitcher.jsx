@@ -14,7 +14,7 @@ const LanguageSwitcher = () => {
   return (
     <Flex>
       {currentLanguage === 'pt' && (
-        <Tooltip label={t('en')}>
+        <Tooltip label={t('en')} placement="top">
           <Image
             src={Usa}
             alt="Ícone EUA"

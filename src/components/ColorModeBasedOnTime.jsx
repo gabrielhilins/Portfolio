@@ -15,7 +15,7 @@ const useColorModeBasedOnTime = () => {
     };
 
     updateColorMode(); // Define o modo de cor baseado na hora atual
-    const interval = setInterval(updateColorMode, 60000); // Atualiza a cada minuto
+    const interval = setInterval(updateColorMode, 150000); // Atualiza a cada 2 minutos e meio
 
     return () => clearInterval(interval); // Limpeza do intervalo ao desmontar o componente
   }, [setColorMode]);

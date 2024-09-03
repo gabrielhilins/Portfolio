@@ -12,20 +12,28 @@ import {
 } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCube, Pagination } from "swiper/modules";
+import { useTranslation } from "react-i18next";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
+
+/* Importação dos Ícones*/
 import { FaGithub } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+
+/*Importação dos Componentes*/
 import ToolBar from "../components/ToolBar";
 import Footer from "../components/Footer";
+
+/*Importação das Imagens*/
 import MockupRec from "../img/Mockup RecDaTerra.png";
-import MockupMarvel from "../img/Mockup Marvel.png"
-import MockupCaremind from "../img/Mockup Caremind.png"
-import MockupINEP from "../img/Mockup INEP.png"
-import "./Projects.css";
-import { useTranslation } from "react-i18next";
+import MockupMarvel from "../img/Mockup Marvel.png";
+import MockupCaremind from "../img/Mockup Caremind.png";
+import MockupINEP from "../img/Mockup INEP.png";
+
+/*Importação da estilização da Paginação do Swiper*/
+import "./Pagination.css";
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -70,8 +78,7 @@ const Projects = () => {
           description: "Vercel",
         },
       ],
-      teamMembers:
-        "Gabriel Henrique",
+      teamMembers: "Gabriel Henrique",
       projectWebsite: "https://marvel-characters-six.vercel.app/",
       repo: "https://github.com/gabrielhilins/Marvel_Characters",
     },
@@ -82,12 +89,6 @@ const Projects = () => {
       imageSrc: MockupRec,
       imageAlt: "Mockup do Projeto Rec Da Terra",
       techUsed: [
-        {
-          src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-          alt: "Java",
-          width: "30px", // Ajustado para responsividade
-          description: "Java",
-        },
         {
           src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
           alt: "Spring Boot",
@@ -172,7 +173,12 @@ const Projects = () => {
   const repoButtonBorderColor = useColorModeValue("black", "white");
   const repoButtonTextColor = useColorModeValue("black", "white");
 
+  const bgHover = useColorModeValue("black", "white");
+  const textColorHover = useColorModeValue("white", "black");
+  const borderColorHover = useColorModeValue("white", "black");
+
   const Slide = ({ project }) => {
+    const { colorMode } = useColorMode();
     return (
       <Flex
         width="100%"
@@ -223,6 +229,7 @@ const Projects = () => {
                 fontWeight="500"
                 pb="30px"
                 textAlign="justify"
+                p={5}
               >
                 {project.summary}
               </Text>
@@ -232,21 +239,26 @@ const Projects = () => {
               <Box
                 display="flex"
                 flexDirection="row"
-                gap="10px"
+                gap="15px"
                 pb="30px"
                 justifyContent="center"
               >
-                {project.techUsed.map((logo, index) => (
-                  <Tooltip
-                    key={index}
-                    label={logo.description}
-                    aria-label={logo.description}
-                  >
-                    <Box display="flex" alignItems="center">
-                      <img src={logo.src} alt={logo.alt} width={logo.width} />
-                    </Box>
-                  </Tooltip>
-                ))}
+                {project.techUsed.map(
+                  (
+                    logo,
+                    index // mapeando as tecnologias usadas atraves da logo e a posicao de cada uma (ndex)
+                  ) => (
+                    <Tooltip
+                      key={index}
+                      label={logo.description}
+                      aria-label={logo.description}
+                    >
+                      <Box display="flex" alignItems="center">
+                        <img src={logo.src} alt={logo.alt} width={logo.width} />
+                      </Box>
+                    </Tooltip>
+                  )
+                )}
               </Box>
               <Text fontSize={{ base: "10px", md: "14px" }}>
                 {t("learnMoreProject")}
@@ -257,19 +269,26 @@ const Projects = () => {
                 gap="15px"
                 pb="30px"
                 justifyContent="center"
+                p="5"
               >
                 <Button
                   bg="linear-gradient(90deg, #6C63FF 0%, #B60000 100%)"
                   color="white"
-                  px={{ base: "10px", md: "20px" }}
-                  py={{ base: "5px", md: "10px" }}
-                  minW={{ base: "80px", md: "120px" }}
+                  px={{ base: "8px", sm: "12px", md: "20px" }} // padding horizontal para diferentes tamanhos de tela
+                  py={{ base: "4px", sm: "6px", md: "10px" }} //  padding vertical
+                  minW={{ base: "120px", md: "160px" }} // largura mínima
                   borderRadius="md"
-                  gap="12px"
+                  gap="8px" // Diminuir o espaço entre o ícone e o texto
                   as="a"
                   href={project.projectWebsite}
                   target="_blank"
                   rel="noopener noreferrer"
+                  width={{ base: "60px", sm: "100px", md: "160px" }} //  largura para diferentes tamanhos de tela
+                  fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+                  _hover={{
+                    bg: "green.500",
+                    color: "white",
+                  }}
                 >
                   <Icon as={FaArrowUpRightFromSquare} />
                   {t("projectWebsite")}
@@ -278,27 +297,55 @@ const Projects = () => {
                   border={`1px solid ${repoButtonBorderColor}`}
                   color={repoButtonTextColor}
                   backgroundColor="transparent"
-                  px={{ base: "10px", md: "20px" }}
-                  py={{ base: "5px", md: "10px" }}
-                  minW={{ base: "80px", md: "120px" }}
+                  px={{ base: "8px", sm: "12px", md: "20px" }} // padding horizontal
+                  py={{ base: "4px", sm: "6px", md: "10px" }} // padding vertical
+                  minW={{ base: "100px", md: "160px" }} // largura mínima
                   borderRadius="md"
                   display="flex"
                   alignItems="center"
-                  gap="12px"
+                  gap="8px" // Diminuir o espaço entre o ícone e o texto
                   as="a"
                   href={project.repo}
                   target="_blank"
                   rel="noopener noreferrer"
+                  fontSize={{ base: "12px", sm: "14px", md: "16px" }}
+                  _hover={{
+                    backgroundColor: bgHover,
+                    color: textColorHover,
+                    borderColor: borderColorHover,
+                  }}
                 >
                   <Icon as={FaGithub} />
                   {t("repo")}
                 </Button>
               </Box>
-              <Text fontSize={{ base: "10px", md: "14px" }}>
+
+              <Text fontSize={{ base: "10px", md: "14px" }} paddingTop="20px">
                 {t("teamMembers")}
               </Text>
-              <Text fontSize={{ base: "10px", md: "14px" }}>
-                {project.teamMembers}
+              <Text fontSize={{ base: "10px", md: "14px" }} padding={{base: "15px" , md: "0px"}}>
+                {project.teamMembers.split(",").map((name, index) => {
+                  const trimmedName = name.trim(); // Remove espaços em branco antes e depois do nome
+                  return trimmedName === "Gabriel Henrique" ? ( // Verifica se o nome é "Gabriel Henrique"
+                    <strong key={index}>
+                      {" "}
+                      {/*Se for, renderiza o nome em negrito*/}
+                      {trimmedName}
+                      {index < project.teamMembers.split(",").length - 1 // Verifica se não é o último nome
+                        ? ", " // Se não for o último, adiciona uma vírgula após o nome
+                        : ""}
+                    </strong>
+                  ) : (
+                    <span key={index}>
+                      {" "}
+                      {/*Se não for "Gabriel Henrique", renderiza o nome normalmente*/}
+                      {trimmedName}
+                      {index < project.teamMembers.split(",").length - 1 // Verifica se não é o último nome
+                        ? ", " // Se não for o último, adiciona uma vírgula após o nome
+                        : ""}
+                    </span>
+                  );
+                })}
               </Text>
             </VStack>
           </Box>
@@ -347,7 +394,9 @@ const Projects = () => {
               {t("projects")}
             </Text>
           </div>
-          <ToolBar />
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <ToolBar />
+          </Box>
           <Swiper
             effect="cube"
             grabCursor={true}
