@@ -1,6 +1,6 @@
 # Meu Portfólio / My Portfolio
 
-Licença / License
+## Licença / License
 
 **Português**
 
