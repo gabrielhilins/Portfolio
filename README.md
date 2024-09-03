@@ -1,5 +1,27 @@
 # Meu Portfólio / My Portfolio
 
+Licença / License
+
+**Português**
+
+Copyright 2024 Gabriel Henrique Lins
+
+Licença Proprietária
+
+Você não pode usar, copiar, modificar ou distribuir, com fins próprios, este website sem permissão expressa do autor. Para obter permissões adicionais, entre em contato com gabrielhilins@gmail.com.
+
+Todos os direitos reservados.
+
+**English**
+
+Copyright 2024 Gabriel Henrique Lins
+
+Proprietary License
+
+You may not use, copy, modify, or distribute this website for personal gain without express permission from the author. For additional permissions, please contact gabrielhilins@gmail.com.
+
+All rights reserved.
+
 ## Descricao do Projeto
 
 **Português**
