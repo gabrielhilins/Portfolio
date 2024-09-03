@@ -58,11 +58,12 @@
     "learnMoreProject": "Saiba mais sobre o projeto:",
     "projectWebsite": "Site do Projeto",
     "repo": "Repositório Github",
-    "teamMembers": "Colaboradores:",
+    "teamMembers": "Desenvolvedor(es):",
     "date": "Data:",
     "previous": "Anterior",
     "next": "Próximo",
     "dashboardINEP": "Dashboard de Gestão Educacional",
+    "summaryINEP": "Dashboard de Gestão Educacional 2022: Sistema de gerenciamento e visualização de dados baseado nos microdados do INEP. Oferece uma visão unificada e intuitiva da educação básica no Brasil, permitindo acompanhamento claro e eficaz das situações das escolas e alunos para promover uma gestão educacional eficiente.",
     "summaryRecDaTerra": "RecDaterra é uma plataforma digital criada como um projeto de faculdade na Universidade Católica de Pernambuco. Ela conecta pequenos empreendimentos de Recife com a comunidade, promovendo produtos e serviços locais e permitindo interação direta entre consumidores e fornecedores. Explore o local e apoie uma comunidade sustentável e vibrante.",
     "issuedBy": "Emitido por:",
     "viewCertificate": "Ver Certificado",
@@ -84,8 +85,10 @@
     "public_speaking_figma": "Apresentação em Público, Figma/Prototipação, Comunicação, Gestão de Projeto e Grupo, Metodologia Ágil",
     "ensino_medio": "Ensino Médio",
     "cmr": "Colégio Militar do Recife - CMR",
-    "work_presentation": "Apresentação de Trabalho, Oratório, Gestão de Grupo, Disciplina, Organização"
-  
+    "work_presentation": "Apresentação de Trabalho, Oratório, Gestão de Grupo, Disciplina, Organização",
+    "marvel": "Personagens da Marvel",
+    "summaryMarvel": "Visualização dos Personagens da Marvel: Um site que utiliza a API Pública da Marvel Comics para exibir os personagens da Marvel. Os usuários podem visualizar uma lista completa de todos os personagens e pesquisar por um específico, proporcionando uma forma fácil e interativa de explorar o Universo Marvel.",
+    "summaryCaremind": "O Caremind Edu é um aplicativo focado no bem-estar físico e mental de educadores, que enfrentam estresse e sobrecarga no ambiente de trabalho. O app oferece atividades diárias de autocuidado, simples e relaxantes, que ao serem concluídas geram pontos. Esses pontos podem ser usados para desbloquear artigos informativos que auxiliam na otimização profissional e pessoal. Além disso, o Caremind Edu proporciona acesso a psicólogos, permitindo agendamentos de sessões e suporte especializado, promovendo a saúde mental dos docentes."
 }
   
   

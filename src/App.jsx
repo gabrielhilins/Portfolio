@@ -7,12 +7,14 @@ import Certificates from './pages/Certificates';
 import Experiences from './pages/Experiences';
 import Pag404 from './pages/Pag404';
 import Talk from "./pages/Talk";
-
+import useColorModeBasedOnTime from './components/ColorModeBasedOnTime.jsx'
 import './App.css'
 
 
 
 function App() {
+  useColorModeBasedOnTime();
+  
   return (
       <>
      

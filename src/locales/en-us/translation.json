@@ -56,11 +56,12 @@
     "learnMoreProject": "Learn More about the Project:",
     "projectWebsite": "Project Website",
     "repo": "Github Repository",
-    "teamMembers": "Team Members:",
+    "teamMembers": "Developer(es)",
     "previous": "Previous",
     "date": "Date:",
     "next": "Next",
     "dashboardINEP": "Educacional Management Dashboard",
+    "summaryINEP": "Educational Management Dashboard 2022: A data management and visualization system based on INEP's microdata. Provides a unified and intuitive view of basic education in Brazil, enabling clear and effective monitoring of school and student situations to promote efficient educational management.",
     "summaryRecDaTerra": "RecDaterra is a digital platform developed as a university project at the Universidade Católica de Pernambuco. It connects small businesses in Recife with the community, promoting local products and services and enabling direct interaction between consumers and suppliers. Explore and support a vibrant, sustainable community.",
     "issuedBy": "Issued By:",
     "viewCertificate": "View Certificate",
@@ -81,8 +82,10 @@
     "public_speaking_figma": "Public Speaking, Figma/Prototyping, Communication, Project and Group Management, Agile Methodology",
     "ensino_medio": "High School",
     "cmr": "Military School of Recife - CMR",
-    "work_presentation": "Work Presentation, Oratory, Group Management, Discipline, Organization"
-
+    "marvel": "Marvel Characters",
+    "summaryMarvel": "Marvel Characters Visualization: A website that uses the Marvel Comics public API to display Marvel characters. Users can view a comprehensive list of all characters and search for specific ones, providing an easy and interactive way to explore the Marvel Universe.",
+    "work_presentation": "Work Presentation, Oratory, Group Management, Discipline, Organization",
+    "summaryCaremind": "Caremind Edu is an app focused on the physical and mental well-being of educators who face stress and overload in the workplace. The app offers daily self-care activities that are simple and relaxing, rewarding points upon completion. These points can be used to unlock informative articles that assist in professional and personal optimization. Additionally, Caremind Edu provides access to psychologists, allowing users to schedule sessions and receive specialized support, promoting the mental health of educators."
   }
     
   
