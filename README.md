@@ -76,13 +76,13 @@ I am a Full Stack developer in training, with skills in Java, React, and NodeJs,
   <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 <a href="mailto:pcdasilvabeserra@gmail.com" target="_blank">
-  <img src="https://img.shields.io/badge/-Gmail-%D93025?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+  <img src="https://img.shields.io/badge/-Gmail-%23D93025?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
 </a>
  <a href="https://github.com/seu-usuario" target="_blank">
   <img src="https://img.shields.io/badge/-GitHub-%23181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
 </a>
 <a href="https://seu-portfolio.com" target="_blank">
-  <img src="https://img.shields.io/badge/-Portfolio-%6C63FF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
+  <img src="https://img.shields.io/badge/-Portfolio-%236C63FF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
 </a>
 
 </div>
