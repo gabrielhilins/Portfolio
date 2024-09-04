@@ -1,5 +1,6 @@
 import { Box, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import RealTimeClock from "./RealTimeClock";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -25,6 +26,7 @@ const Footer = () => {
       >
         {t("thanks")}
       </Text>
+      <RealTimeClock />
     </Box>
   );
 };
