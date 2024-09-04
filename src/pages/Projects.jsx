@@ -29,8 +29,7 @@ import Footer from "../components/Footer";
 /*Importação das Imagens*/
 import MockupRec from "../img/Mockup RecDaTerra.png";
 import MockupMarvel from "../img/Mockup Marvel.png";
-import MockupCaremind from "../img/Mockup Caremind.png";
-import MockupPorfolio from '../img/Mockup Porfolio.png'
+import MockupPorfolio from "../img/Mockup Portfolio.png";
 import MockupINEP from "../img/Mockup INEP.png";
 
 /*Importação da estilização da Paginação do Swiper*/
@@ -122,7 +121,7 @@ const Projects = () => {
         },
       ],
       teamMembers:
-      "Arthur Vinícius, Cecília Sitcovisky, Gabriel Henrique, Matheus Vinícius e Yuri Catunda",
+        "Arthur Vinícius, Cecília Sitcovisky, Gabriel Henrique, Matheus Vinícius e Yuri Catunda",
       projectWebsite: "https://rec-da-terra-front-end.vercel.app/",
       repo: "https://github.com/SIN-disciplina-PI3/RecDaTerra_FrontEnd",
     },
@@ -165,7 +164,7 @@ const Projects = () => {
         },
       ],
       teamMembers:
-      "Arthur Vinícius, Gabriel Henrique, Luiz Henrique & Yuri Catunda",
+        "Arthur Vinícius, Gabriel Henrique, Luiz Henrique & Yuri Catunda",
       projectWebsite: "https://projeto-dashboard-inep.vercel.app/index.html",
       repo: "https://github.com/gabrielhilins/Projeto-Dashboard-Inep",
     },
@@ -182,7 +181,7 @@ const Projects = () => {
           width: "30px", // Ajustado para responsividade
           description: "React",
         },
-        
+
         {
           src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
           alt: "Vite",
@@ -201,11 +200,10 @@ const Projects = () => {
           width: "30px", // Ajustado para responsividade
           description: "Figma",
         },
-        
       ],
-      teamMembers:
-        "Gabriel Henrique",
-      projectWebsite: "https://portfolio-gabriel-henriques-projects.vercel.app/",
+      teamMembers: "Gabriel Henrique",
+      projectWebsite:
+        "https://portfolio-gabriel-henriques-projects.vercel.app/",
       repo: "https://github.com/gabrielhilins/Portfolio",
     },
   ];
@@ -363,25 +361,31 @@ const Projects = () => {
               <Text fontSize={{ base: "10px", md: "14px" }} paddingTop="20px">
                 {t("teamMembers")}
               </Text>
-              <Text fontSize={{ base: "10px", md: "14px" }} padding={{base: "15px" , md: "0px"}}>
+              <Text
+                fontSize={{ base: "10px", md: "14px" }}
+                padding={{ base: "15px", md: "0px" }}
+              >
                 {project.teamMembers.split(",").map((name, index) => {
                   const trimmedName = name.trim(); // Remove espaços em branco antes e depois do nome
                   return trimmedName === "Gabriel Henrique" ? ( // Verifica se o nome é "Gabriel Henrique"
-                    <strong key={index}>
-                      {" "}
-                      {/*Se for, renderiza o nome em negrito*/}
-                      {trimmedName}
-                      {index < project.teamMembers.split(",").length - 1 // Verifica se não é o último nome
-                        ? ", " // Se não for o último, adiciona uma vírgula após o nome
-                        : ""}
-                    </strong>
+                    <a
+                      href="https://www.linkedin.com/in/gabriel-henrique-lins"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      key={index}
+                    >
+                      <strong>
+                        {trimmedName}
+                        {index < project.teamMembers.split(",").length - 1
+                          ? ", "
+                          : ""}
+                      </strong>
+                    </a>
                   ) : (
                     <span key={index}>
-                      {" "}
-                      {/*Se não for "Gabriel Henrique", renderiza o nome normalmente*/}
                       {trimmedName}
-                      {index < project.teamMembers.split(",").length - 1 // Verifica se não é o último nome
-                        ? ", " // Se não for o último, adiciona uma vírgula após o nome
+                      {index < project.teamMembers.split(",").length - 1
+                        ? ", "
                         : ""}
                     </span>
                   );
@@ -406,7 +410,6 @@ const Projects = () => {
               width={{ base: "80%", md: "100%" }} // Ajustado para responsividade
               maxWidth="500px"
               height="auto"
-              
             />
           </Box>
         </Box>
