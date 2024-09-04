@@ -3,26 +3,36 @@ import { Box, Text } from '@chakra-ui/react';
 
 const RealTimeClock = () => {
   const [dateTime, setDateTime] = useState({
-    day: '00',
-    month: '00',
-    year: '0000',
+    date: '',
     hours: '00',
     minutes: '00',
     seconds: '00',
     centiseconds: '00',
+    period: 'AM',
   });
 
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
+
+      // Formatação da data baseada na localização do usuário
+      const formattedDate = new Intl.DateTimeFormat(navigator.language, {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+      }).format(now);
+
+      // Formatação da hora com AM/PM
+      const hours12 = now.getHours() % 12 || 12; // Converte para formato 12 horas
+      const period = now.getHours() >= 12 ? 'PM' : 'AM'; // Determina AM ou PM
+
       setDateTime({
-        day: String(now.getDate()).padStart(2, '0'), // Dia do mês
-        month: String(now.getMonth() + 1).padStart(2, '0'), // Mês (Janeiro é 0)
-        year: now.getFullYear(), // Ano
-        hours: String(now.getHours()).padStart(2, '0'), // Hora local
+        date: formattedDate, // Data formatada conforme a localização do usuário
+        hours: String(hours12).padStart(2, '0'), // Hora em formato 12 horas
         minutes: String(now.getMinutes()).padStart(2, '0'), // Minutos locais
         seconds: String(now.getSeconds()).padStart(2, '0'), // Segundos locais
         centiseconds: String(Math.floor(now.getMilliseconds() / 10)).padStart(2, '0'), // Centésimos de segundo locais
+        period, // AM ou PM
       });
     };
 
@@ -34,10 +44,10 @@ const RealTimeClock = () => {
   return (
     <Box display="flex" flexDirection="row" textAlign="center" color="white" gap="10px" alignItems="center" justifyContent="center" marginTop="10px">
       <Text fontSize="12px" fontWeight="regular">
-        {dateTime.day}/{dateTime.month}/{dateTime.year}
+        {dateTime.date}
       </Text>
       <Text fontSize="12px" fontWeight="regular">
-        {dateTime.hours}:{dateTime.minutes}:{dateTime.seconds}:{dateTime.centiseconds}
+        {dateTime.hours}:{dateTime.minutes}:{dateTime.seconds}:{dateTime.centiseconds}: {dateTime.period}
       </Text>
     </Box>
   );
