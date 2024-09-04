@@ -49,14 +49,14 @@ In summary, my portfolio is not just a collection of projects; it is a visual an
 
 ## Tecnologias e Ferramentas Utilizadas no Portfolio / Technologies and Tools Used in the Portfolio
 
-- Visual Interface: (React)[https://react.dev/]
-- Styling: (Chakra UI)[https://v2.chakra-ui.com/]
-- Sliders: (Swiper js)[https://swiperjs.com/]
-- Deploy: (Vercel)[https://vercel.com/docs]
-- Translation: (118next)[https://www.i18next.com/]
-- Icons: (react-icons)[https://www.npmjs.com/package/react-icons]
-- UI/UX: (Figma)[https://help.figma.com/hc/en-us/categories/360002051613-Get-started]
-- Version Control: (Git)[https://git-scm.com/doc]
+- **Visual Interface:** [React](https://react.dev/)
+- **Styling:** [Chakra UI](https://v2.chakra-ui.com/)
+- **Sliders:** [Swiper JS](https://swiperjs.com/)
+- **Deploy:** [Vercel](https://vercel.com/docs)
+- **Translation:** [i18next](https://www.i18next.com/)
+- **Icons:** [react-icons](https://www.npmjs.com/package/react-icons)
+- **UI/UX:** [Figma](https://help.figma.com/hc/en-us/categories/360002051613-Get-started)
+- **Version Control:** [Git](https://git-scm.com/doc)
 
 ## Sobre Mim / About Me
 
@@ -76,13 +76,13 @@ I am a Full Stack developer in training, with skills in Java, React, and NodeJs,
   <img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 <a href="mailto:pcdasilvabeserra@gmail.com" target="_blank">
-  <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+  <img src="https://img.shields.io/badge/-Gmail-%D93025?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
 </a>
  <a href="https://github.com/seu-usuario" target="_blank">
-  <img src="https://img.shields.io/badge/-GitHub-%23121011?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+  <img src="https://img.shields.io/badge/-GitHub-%23181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
 </a>
 <a href="https://seu-portfolio.com" target="_blank">
-  <img src="https://img.shields.io/badge/-Portfolio-%23000000?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
+  <img src="https://img.shields.io/badge/-Portfolio-%6C63FF?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Portfolio">
 </a>
 
 </div>
