@@ -1,7 +1,7 @@
 {
     "name": "Gabriel Henrique Lins",
     "jobTitle": "Desenvolvedor FullStack",
-    "subtitle": "Sou um desenvolvedor Back End apaixonado por inovação e tecnologia!",
+    "subtitle": "Sou um desenvolvedor FullStack apaixonado por inovação e tecnologia!",
     "location": "Recife, Pernambuco, Brasil",
     "talkWithMe": "Fale Comigo",
     "talkWithMeTitle": "Fale Comigo",
@@ -36,6 +36,8 @@
     "nameForm": "Nome",
     "messageForm": "Mensagem",
     "subject": "Assunto",
+    "leadership": "Líder",
+    "empathy": "Empático",
     "nameRequired": "Nome é Obrigatório.",
     "email": "Email é Obrigatório.",
     "messageRequired": "Mensagem é Obrigatório.",
@@ -45,7 +47,6 @@
     "yourSubject": "Digite o Assunto do email",
     "yourMessage": "Digite sua Mensagem",
     "submit": "Enviar",
-    "publicSpeech": "Fala em Público",
     "sendEmailError": "Erro ao enviar o email",
     "descriptionError": "Ocorreu um erro ao tentar enviar sua mensagem. Tente novamente mais tarde.",
     "pageNotFound": "Ooops... Página Não Encontada",
@@ -91,7 +92,7 @@
     "summaryMarvel": "Visualização dos Personagens da Marvel: Um site que utiliza a API Pública da Marvel Comics para exibir os personagens da Marvel. Os usuários podem visualizar uma lista completa de todos os personagens e pesquisar por um específico, proporcionando uma forma fácil e interativa de explorar o Universo Marvel.",
     "summaryPortfolio": "Meu Portfólio: Uma vitrine digital que destaca minha jornada como desenvolvedor Full Stack em formação. Com design minimalista e animações sutis, o portfólio é totalmente traduzido em português e inglês, proporcionando uma experiência visual e funcional para explorar meus projetos e habilidades.",
   "aboutMeTooltip": "Sobre Mim",
-    "summaryCaremind": "O Caremind Edu é um aplicativo focado no bem-estar físico e mental de educadores, que enfrentam estresse e sobrecarga no ambiente de trabalho. O app oferece atividades diárias de autocuidado, simples e relaxantes, que ao serem concluídas geram pontos. Esses pontos podem ser usados para desbloquear artigos informativos que auxiliam na otimização profissional e pessoal. Além disso, o Caremind Edu proporciona acesso a psicólogos, permitindo agendamentos de sessões e suporte especializado, promovendo a saúde mental dos docentes."
+  "summaryCaremind": "O Caremind Edu é um aplicativo focado no bem-estar físico e mental de educadores, que enfrentam estresse e sobrecarga no ambiente de trabalho. O app oferece atividades diárias de autocuidado, simples e relaxantes, que ao serem concluídas geram pontos. Esses pontos podem ser usados para desbloquear artigos informativos que auxiliam na otimização profissional e pessoal. Além disso, o Caremind Edu proporciona acesso a psicólogos, permitindo agendamentos de sessões e suporte especializado, promovendo a saúde mental dos docentes."
 }
   
   

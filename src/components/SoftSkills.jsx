@@ -12,7 +12,8 @@ const SoftSkills = () => {
         t("continuousLearning"),
         t("projectManagement"),
         t("assertiveCommunicator"),
-        t("publicSpeech")
+        t("empathy"),
+        t("leadership")
       ];
 
   return (
