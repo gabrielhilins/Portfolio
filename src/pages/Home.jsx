@@ -30,10 +30,22 @@ import TechLogos from "../components/TechLogos";
 import ColorModeSwitcher from "../components/ColorModeSwitcher";
 import Footer from "../components/Footer";
 import SoftSkills from "../components/SoftSkills";
+import ModalAboutMe from "../components/ModalAboutMe";
 
 function Home() {
   const { t, i18n } = useTranslation();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isOpenResume,
+    onOpen: onOpenResume,
+    onClose: onCloseResume,
+  } = useDisclosure(); // Para Modal de CV
+  
+  const {
+    isOpen: isOpenAboutMe,
+    onOpen: onOpenAboutMe,
+    onClose: onCloseAboutMe,
+  } = useDisclosure(); // Para Modal About Me
+
   const { colorMode, toggleColorMode } = useColorMode();
 
 
@@ -64,7 +76,7 @@ function Home() {
           {/* Cabeçalho */}
           <Box
             display="flex"
-            flexDirection={{ base: "column", sm: "row" }} // Empilha verticalmente em telas pequenas
+            flexDirection="row" // Empilha verticalmente em telas pequenas
             alignItems="center"
             mb="10px"
             gap="30px"
@@ -85,9 +97,18 @@ function Home() {
             fontSize={{ base: "18px", sm: "20px" }}
             fontWeight="700"
             paddingTop="5px"
+            onClick={onOpenAboutMe} // Abre o modal
+            cursor="pointer"
+            _hover={{
+              color: "#B60000",
+              transition: "color 0.2s ease-in-out",
+            }}
           >
             {t("name")}
           </Text>
+          <ModalAboutMe isOpen={isOpenAboutMe} onClose={onCloseAboutMe} />
+          
+          <Text fontSize="8px" marginBottom="16px" fontWeight="500">Clique no meu nome acima para saber mais sobre mim</Text>
           <Text
             fontSize={{ base: "14px", sm: "15px" }}
             fontWeight="400"
@@ -151,7 +172,7 @@ function Home() {
 
             <Tooltip label={t('viewResume')} aria-label={t('viewResume')} placement="bottom">
               <Button
-                onClick={onOpen}
+                onClick={onOpenResume}
                 variant="link"
                 aria-label="View Resume"
                 color={useColorModeValue("black", "white")}
@@ -166,7 +187,7 @@ function Home() {
               </Button>
             </Tooltip>
 
-            <ModalResume isOpen={isOpen} onClose={onClose} />
+            <ModalResume isOpen={isOpenResume} onClose={onCloseResume} />
           </Box>
           <Text
             fontSize={{ base: "16px", sm: "18px" }}
