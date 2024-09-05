@@ -16,7 +16,7 @@ import {
 import emailjs from '@emailjs/browser';
 import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom"; // Import para navegação
+import { useNavigate } from "react-router-dom";
 import { IoPersonOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { MdLabelImportantOutline } from "react-icons/md";
@@ -27,16 +27,22 @@ const ContactForm = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
-  const [loading, setLoading] = useState(false); // Estado para gerenciar o carregamento
+  const [loading, setLoading] = useState(false);
   const form = useRef();
   const toast = useToast();
   const { t } = useTranslation();
-  const navigate = useNavigate(); // Hook para navegação
+  const navigate = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
     if (!name) newErrors.name = t("nameRequired");
-    if (!email) newErrors.email = t("emailRequired");
+    if (!email) {
+      newErrors.email = t("emailRequired");
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = t("invalidEmailFormat");
+    }
     if (!message) newErrors.message = t("messageRequired");
     return newErrors;
   };
@@ -49,7 +55,7 @@ const ContactForm = () => {
       return;
     }
 
-    setLoading(true); // Ativa o estado de carregamento
+    setLoading(true);
 
     emailjs.send(
       import.meta.env.VITE_EMAILJS_SERVICE_ID, 
@@ -71,17 +77,16 @@ const ContactForm = () => {
         isClosable: true,
       });
 
-      // Limpar campos do formulário após envio
       setName("");
       setEmail("");
       setSubject("");
       setMessage("");
 
-      setLoading(false); // Desativa o estado de carregamento
-      navigate("/"); // Redireciona para a página inicial
+      setLoading(false);
+      navigate("/");
     })
     .catch((error) => {
-      setLoading(false); // Desativa o estado de carregamento
+      setLoading(false);
       toast({
         title: t("sendEmailError"),
         description: t("descriptionError"),
@@ -95,7 +100,7 @@ const ContactForm = () => {
 
   return (
     <Box maxWidth="500px" mx="auto" p={4}>
-      <form ref={form} onSubmit={handleSubmit}>
+      <form ref={form} onSubmit={handleSubmit} noValidate> {/* Adiciona noValidate aqui */}
         <VStack spacing={4} align="stretch">
           <FormControl id="name" isRequired isInvalid={!!errors.name}>
             <FormLabel>{t("nameForm")}</FormLabel>
@@ -176,9 +181,9 @@ const ContactForm = () => {
               transition: "background-color 0.3s ease",
             }}
             type="submit"
-            isDisabled={loading} // Desabilita o botão enquanto carrega
+            isDisabled={loading}
           >
-            {loading ? <Spinner size="sm" /> : t("submit")} {/* Mostra o Spinner ou o texto */}
+            {loading ? <Spinner size="sm" /> : t("submit")}
           </Button>
         </VStack>
       </form>
