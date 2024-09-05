@@ -102,6 +102,7 @@ function Home() {
             _hover={{
               color: "#B60000",
               transition: "color 0.2s ease-in-out",
+              textDecoration: "underline"
             }}
           >
             {t("name")}
