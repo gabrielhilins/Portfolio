@@ -90,6 +90,7 @@
     "work_presentation": "Apresentação de Trabalho, Oratório, Gestão de Grupo, Disciplina, Organização",
     "marvel": "Personagens da Marvel",
     "portfolio": "Meu Portfólio",
+    "clickToKnowMore": "Clique no meu nome acima para saber mais sobre mim",
     "summaryMarvel": "Visualização dos Personagens da Marvel: Um site que utiliza a API Pública da Marvel Comics para exibir os personagens da Marvel. Os usuários podem visualizar uma lista completa de todos os personagens e pesquisar por um específico, proporcionando uma forma fácil e interativa de explorar o Universo Marvel.",
     "summaryPortfolio": "Meu Portfólio: Uma vitrine digital que destaca minha jornada como desenvolvedor Full Stack em formação. Com design minimalista e animações sutis, o portfólio é totalmente traduzido em português e inglês, proporcionando uma experiência visual e funcional para explorar meus projetos e habilidades.",
   "aboutMeTooltip": "Sobre Mim",
