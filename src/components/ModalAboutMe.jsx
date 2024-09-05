@@ -37,7 +37,7 @@ const ModalAboutMe = ({ isOpen, onClose }) => {
         <Modal isOpen={isOpen} onClose={onClose} size="xl">
             <ModalOverlay />
             <ModalContent maxW="90vw" maxH="90vh" height="80vh" bg={backgroundColor}>
-                <ModalHeader>{i18n.language === 'en' ? 'About Me' : 'Sobre Mim'}</ModalHeader>
+                <ModalHeader textAlign="center">{i18n.language === 'en' ? 'About Me' : 'Sobre Mim'}</ModalHeader>
                 <ModalCloseButton />
                 <ModalBody>
                     <Box display="flex" flexDirection={{ base: 'column', md: 'row' }} alignItems="center">
@@ -50,9 +50,10 @@ const ModalAboutMe = ({ isOpen, onClose }) => {
                             {paragraphs.map((paragraph, index) => (
                                 <Text
                                     key={index}
-                                    fontSize={{ base: '12px', md: '14px' }} 
+                                    fontSize={{ base: '10px', md: '12px' }} 
                                     mb="2" 
                                     textAlign="justify"
+                                    marginBottom="30px"
                                 >
                                     {paragraph}
                                 </Text>

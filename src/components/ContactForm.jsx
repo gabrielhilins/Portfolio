@@ -47,6 +47,36 @@ const ContactForm = () => {
     return newErrors;
   };
 
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+
+    switch (id) {
+      case "name":
+        setName(value);
+        if (errors.name) {
+          setErrors((prevErrors) => ({ ...prevErrors, name: undefined }));
+        }
+        break;
+      case "email":
+        setEmail(value);
+        if (errors.email) {
+          setErrors((prevErrors) => ({ ...prevErrors, email: undefined }));
+        }
+        break;
+      case "subject":
+        setSubject(value);
+        break;
+      case "message":
+        setMessage(value);
+        if (errors.message) {
+          setErrors((prevErrors) => ({ ...prevErrors, message: undefined }));
+        }
+        break;
+      default:
+        break;
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const validationErrors = validateForm();
@@ -100,7 +130,7 @@ const ContactForm = () => {
 
   return (
     <Box maxWidth="500px" mx="auto" p={4}>
-      <form ref={form} onSubmit={handleSubmit} noValidate> {/* Adiciona noValidate aqui */}
+      <form ref={form} onSubmit={handleSubmit} noValidate>
         <VStack spacing={4} align="stretch">
           <FormControl id="name" isRequired isInvalid={!!errors.name}>
             <FormLabel>{t("nameForm")}</FormLabel>
@@ -109,13 +139,14 @@ const ContactForm = () => {
                 <Icon as={IoPersonOutline} color="#B60000"/>
               </InputLeftElement>
               <Input
+                id="name"
                 type="text"
                 value={name}
                 placeholder={t("yourName")}
                 fontSize={{base: "13px", md: "16px"}}
                 errorBorderColor="red.300"
                 autoComplete="off"
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleChange}
               />
             </InputGroup>
             <FormErrorMessage>{errors.name}</FormErrorMessage>
@@ -128,12 +159,13 @@ const ContactForm = () => {
                 <Icon as={IoMailOutline} color="#B60000"/>
               </InputLeftElement>
               <Input
+                id="email"
                 type="email"
                 value={email}
                 placeholder={t("yourEmail")}
                 fontSize={{base: "13px", md: "16px"}}
                 errorBorderColor="red.300"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleChange}
               />
             </InputGroup>
             <FormErrorMessage>{errors.email}</FormErrorMessage>
@@ -146,13 +178,14 @@ const ContactForm = () => {
                 <Icon as={MdLabelImportantOutline} color="#B60000"/>
               </InputLeftElement>
               <Input
+                id="subject"
                 type="text"
                 value={subject}
                 placeholder={t("yourSubject")}
                 fontSize={{base: "13px", md: "16px"}}
                 errorBorderColor="red.300"
                 autoComplete="off"
-                onChange={(e) => setSubject(e.target.value)}
+                onChange={handleChange}
               />
             </InputGroup>
           </FormControl>
@@ -160,8 +193,9 @@ const ContactForm = () => {
           <FormControl id="message" isRequired isInvalid={!!errors.message}>
             <FormLabel>{t("messageForm")}</FormLabel>
             <Textarea
+              id="message"
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={handleChange}
               placeholder={t("yourMessage")}
               fontSize={{base: "13px", md: "16px"}}
               rows={6}

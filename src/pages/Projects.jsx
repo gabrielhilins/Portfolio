@@ -462,6 +462,7 @@ const Projects = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+          
         </Box>
       </Flex>
       <Footer />
