@@ -27,7 +27,7 @@ function Talk() {
         width="100%"
         overflow="hidden"
         mt="60px"
-        mb="20px"
+        mb="60px"
       >
         <Box
           width="100%"
