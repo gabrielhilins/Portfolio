@@ -108,7 +108,7 @@ function Home() {
           </Text>
           <ModalAboutMe isOpen={isOpenAboutMe} onClose={onCloseAboutMe} />
           
-          <Text fontSize={{base: "8px", md: "10px"}} marginBottom="16px" fontWeight="500">Clique no meu nome acima para saber mais sobre mim</Text>
+          <Text fontSize={{base: "8px", md: "10px"}} marginBottom="16px" fontWeight="500">{t('clickToKnowMore')}</Text>
           <Text
             fontSize={{ base: "14px", sm: "15px" }}
             fontWeight="400"
