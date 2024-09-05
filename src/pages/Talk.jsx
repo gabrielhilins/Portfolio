@@ -24,8 +24,6 @@ function Talk() {
         alignItems="center" // Centraliza verticalmente
         justifyContent="center" // Centraliza horizontalmente
         padding="20px"
-        mt="60px"
-        mb="60px"
         width="100%"
         overflow="hidden"
       >
