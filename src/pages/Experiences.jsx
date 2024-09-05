@@ -8,7 +8,6 @@ import Cesar from '../img/cesar.png';
 import Porto from '../img/porto.png';
 import Rec from '../img/rec_n_play_logo 1.png';
 import Tpf from '../img/tpfengenharia_logo 1.png';
-import Cmr from '../img/CMR.png';
 import './Experiences.css';
 import './Pagination.css'
 
@@ -121,31 +120,6 @@ const Timeline = () => {
               <h4 className="timeline-element-subtitle">Porto Digital</h4>
               <p>{t("public_speaking_figma")}</p>
               <span className="timeline-element-date" style={dateStyle}>05/2023 - 06/2023</span>
-            </div>
-          </VerticalTimelineElement>
-
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="Jun 2023"
-            icon={<Image
-              src={Cmr}
-              alt="Descrição da imagem"
-              className="timeline-icon"
-            />}
-            contentStyle={{
-              background: colorMode === "light" ? "white" : "#333",
-              color: colorMode === "light" ? "black" : "white",
-              border: colorMode === "light" ? "2px solid black" : "2px solid white"
-            }}
-            contentArrowStyle={{
-              borderRight: colorMode === "light" ? "7px solid white" : "7px solid #333"
-            }}
-          >
-            <div className="timeline-element-content">
-              <h3 className="timeline-element-title">{t("ensino_medio")}</h3>
-              <h4 className="timeline-element-subtitle">{t("cmr")}</h4>
-              <p>{t("work_presentation")}</p>
-              <span className="timeline-element-date" style={dateStyle}>01/2020 - 12/2022</span>
             </div>
           </VerticalTimelineElement>
 

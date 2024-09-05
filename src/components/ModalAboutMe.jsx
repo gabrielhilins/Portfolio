@@ -20,13 +20,13 @@ const ModalAboutMe = ({ isOpen, onClose }) => {
     // Definição do texto diretamente no componente para fins de teste
     const paragraphs = i18n.language === 'en'
         ? [
-            "👋 Hello, I'm Gabriel Henrique, a 19-year-old from Recife studying Systems for the Internet at UNICAP.",
+            "👋 Hello, I'm Gabriel Henrique, a 19-year-old from Recife studying Systems for the Internet at UNICAP. I completed my High School education at the Military School of Recife (CMR), which laid the foundation for my passion in innovation.",
             "👨‍💻 I'm a Full Stack developer in training with an interest in Java, React & more! In my free time, I enjoy listening to music🎧, watching movies🍿, playing sports⚽🏀, and working out💪.",
             "🤓 I'm looking for my first professional opportunity in the field of Technology and Innovation. My goal is to participate in impactful projects, always learning and contributing to a collaborative and innovative environment.",
             "💭 My dream is to inspire others to continuously improve and make a difference. If you are looking for someone passionate and dedicated, I am ready to chat!📲"
         ]
         : [
-            "👋 Olá, sou Gabriel Henrique, um pernambucano de Recife com 19 anos, cursando Sistemas para Internet na UNICAP.",
+            "👋 Olá, sou Gabriel Henrique, um pernambucano de Recife com 19 anos, cursando Sistemas para Internet na UNICAP. Conluí meu Ensino Médio no Colégio Militar do Recife (CMR), o que foi fundamental para despertar miha paixão por inovação.",
             "👨‍💻 Sou um desenvolvedor Full Stack em formação com interesse em Java, React e mais! Nos meus momentos livres, gosto de escutar música🎧, assistir filmes🍿, praticar esportes⚽🏀 e frequentar a academia💪.",
             "🤓 Estou em busca da minha primeira oportunidade profissional na área de Tecnologia e Inovação. Meu objetivo é participar de projetos impactantes, sempre aprendendo e contribuindo para um ambiente colaborativo e inovador.",
             "💭 Meu sonho é inspirar outros a melhorar continuamente e fazer a diferença. Se você procura alguém apaixonado e dedicado, estou pronto para conversar!📲"
