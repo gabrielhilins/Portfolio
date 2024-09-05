@@ -26,6 +26,8 @@ function Talk() {
         padding="20px"
         width="100%"
         overflow="hidden"
+        mt="60px"
+        mb="20px"
       >
         <Box
           width="100%"
