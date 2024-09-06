@@ -7,7 +7,7 @@ function PrivacyPolicy() {
   const { t } = useTranslation();
 
   return (
-    <Box p={4}>
+    <Box p={4} display="flex" flexDirection="column" justifyContent="center">
         <LanguageSwitcher />
       <Heading mb={4}>{t('privacyPolicyTitle')}</Heading>
       <Text mb={2}>{t('privacyPolicyIntro')}</Text>
