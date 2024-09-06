@@ -18,12 +18,10 @@ import { useState, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { IoPersonOutline } from "react-icons/io5";
-import { IoMailOutline } from "react-icons/io5";
 import { MdLabelImportantOutline } from "react-icons/md";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
@@ -35,15 +33,11 @@ const ContactForm = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!name) newErrors.name = t("nameRequired");
-    if (!email) {
-      newErrors.email = t("emailRequired");
-    } else if (!emailRegex.test(email)) {
-      newErrors.email = t("invalidEmailFormat");
-    }
+    if (!subject) newErrors.subject = t("subjectRequired");
     if (!message) newErrors.message = t("messageRequired");
+
     return newErrors;
   };
 
@@ -57,14 +51,11 @@ const ContactForm = () => {
           setErrors((prevErrors) => ({ ...prevErrors, name: undefined }));
         }
         break;
-      case "email":
-        setEmail(value);
-        if (errors.email) {
-          setErrors((prevErrors) => ({ ...prevErrors, email: undefined }));
-        }
-        break;
       case "subject":
         setSubject(value);
+        if (errors.subject) {
+          setErrors((prevErrors) => ({ ...prevErrors, subject: undefined }));
+        }
         break;
       case "message":
         setMessage(value);
@@ -92,7 +83,6 @@ const ContactForm = () => {
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
       {
         from_name: name,
-        from_email: email,
         subject: subject,
         message: message,
       },
@@ -108,7 +98,6 @@ const ContactForm = () => {
       });
 
       setName("");
-      setEmail("");
       setSubject("");
       setMessage("");
 
@@ -152,26 +141,7 @@ const ContactForm = () => {
             <FormErrorMessage>{errors.name}</FormErrorMessage>
           </FormControl>
 
-          <FormControl id="email" isRequired isInvalid={!!errors.email}>
-            <FormLabel>Email</FormLabel>
-            <InputGroup>
-              <InputLeftElement pointerEvents="none">
-                <Icon as={IoMailOutline} color="#B60000"/>
-              </InputLeftElement>
-              <Input
-                id="email"
-                type="email"
-                value={email}
-                placeholder={t("yourEmail")}
-                fontSize={{base: "13px", md: "16px"}}
-                errorBorderColor="red.300"
-                onChange={handleChange}
-              />
-            </InputGroup>
-            <FormErrorMessage>{errors.email}</FormErrorMessage>
-          </FormControl>
-
-          <FormControl id="subject">
+          <FormControl id="subject" isRequired isInvalid={!!errors.subject}>
             <FormLabel>{t("subject")}</FormLabel>
             <InputGroup>
               <InputLeftElement pointerEvents="none">
@@ -188,6 +158,7 @@ const ContactForm = () => {
                 onChange={handleChange}
               />
             </InputGroup>
+            <FormErrorMessage>{errors.subject}</FormErrorMessage>
           </FormControl>
 
           <FormControl id="message" isRequired isInvalid={!!errors.message}>
