@@ -3,7 +3,7 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 
-const PrivacyPolicy = () => {
+function PrivacyPolicy() {
   const { t } = useTranslation();
 
   return (
