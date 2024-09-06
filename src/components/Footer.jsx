@@ -13,6 +13,7 @@ const Footer = () => {
         as="footer"
         padding="30px"
         textAlign="center"
+        color="white"
       >
         <Text
           fontSize={{ base: "16px", sm: "18px" }}
