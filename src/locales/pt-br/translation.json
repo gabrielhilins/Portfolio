@@ -103,7 +103,21 @@
     "clickToKnowMore": "Clique no meu nome acima para saber mais sobre mim",
     "summaryMarvel": "Visualização dos Personagens da Marvel: Um site que utiliza a API Pública da Marvel Comics para exibir os personagens da Marvel. Os usuários podem visualizar uma lista completa de todos os personagens e pesquisar por um específico, proporcionando uma forma fácil e interativa de explorar o Universo Marvel.",
     "summaryPortfolio": "Meu Portfólio é uma vitrine digital que destaca minha jornada como desenvolvedor Full Stack em formação. Com design minimalista e animações sutis, mas originais, o portfólio é totalmente traduzido em português e inglês, proporcionando uma experiência visual e funcional para explorar meus projetos e habilidades.",
-  "summaryCaremind": "O Caremind Edu é um aplicativo focado no bem-estar físico e mental de educadores, que enfrentam estresse e sobrecarga no ambiente de trabalho. O app oferece atividades diárias de autocuidado, simples e relaxantes, que ao serem concluídas geram pontos. Esses pontos podem ser usados para desbloquear artigos informativos que auxiliam na otimização profissional e pessoal. Além disso, o Caremind Edu proporciona acesso a psicólogos, permitindo agendamentos de sessões e suporte especializado, promovendo a saúde mental dos docentes."
+      "privacyPolicyTitle": "Política de Privacidade",
+      "privacyPolicyIntro": "Sua privacidade é importante para nós. Esta política explica como lidamos com suas informações quando você visita nosso site.",
+      "usageHeading": "Uso de Dados",
+      "usageText": "Não coletamos nem armazenamos informações pessoais identificáveis através do nosso site. As informações coletadas são usadas exclusivamente para exibir anúncios de forma eficiente e não para nenhum outro propósito.",
+      "advertisingHeading": "Publicidade",
+      "advertisingText": "Utilizamos o Google AdSense para exibir anúncios em nosso site. O Google AdSense pode coletar dados para exibir anúncios mais relevantes para você, mas não temos acesso a essas informações nem as utilizamos para qualquer outro fim.",
+      "cookiesHeading": "Cookies",
+      "cookiesText": "Nosso site pode usar cookies para fins de publicidade, mas não para coletar dados pessoais. Você pode desativar cookies através das configurações do seu navegador.",
+      "securityHeading": "Segurança",
+      "securityText": "Levamos a segurança de suas informações a sério. No entanto, como qualquer transmissão de dados pela internet, não podemos garantir segurança absoluta.",
+      "changesHeading": "Alterações nesta Política",
+      "changesText": "Podemos atualizar esta política ocasionalmente. Quaisquer alterações serão publicadas nesta página.",
+      "contactHeading": "Contato",
+      "contactText": "Se você tiver alguma dúvida sobre esta política de privacidade, entre em contato conosco através do nosso formulário de contato."
+    
 }
   
   

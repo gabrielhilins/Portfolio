@@ -106,7 +106,21 @@
     "october2023": "October 2023",
     "december2023": "December 2023",
     "december2022": "December 2022",
-    "summaryCaremind": "Caremind Edu is an app focused on the physical and mental well-being of educators who face stress and overload in the workplace. The app offers daily self-care activities that are simple and relaxing, rewarding points upon completion. These points can be used to unlock informative articles that assist in professional and personal optimization. Additionally, Caremind Edu provides access to psychologists, allowing users to schedule sessions and receive specialized support, promoting the mental health of educators."
+      "privacyPolicyTitle": "Privacy Policy",
+      "privacyPolicyIntro": "Your privacy is important to us. This policy explains how we handle your information when you visit our site.",
+      "usageHeading": "Data Usage",
+      "usageText": "We do not collect or store personally identifiable information through our site. The information collected is used solely to display ads efficiently and not for any other purpose.",
+      "advertisingHeading": "Advertising",
+      "advertisingText": "We use Google AdSense to display ads on our site. Google AdSense may collect data to show more relevant ads to you, but we do not have access to this information or use it for any other purpose.",
+      "cookiesHeading": "Cookies",
+      "cookiesText": "Our site may use cookies for advertising purposes, but not to collect personal data. You can disable cookies through your browser settings.",
+      "securityHeading": "Security",
+      "securityText": "We take the security of your information seriously. However, as with any data transmission over the internet, we cannot guarantee absolute security.",
+      "changesHeading": "Changes to This Policy",
+      "changesText": "We may update this policy occasionally. Any changes will be posted on this page.",
+      "contactHeading": "Contact",
+      "contactText": "If you have any questions about this privacy policy, please contact us through our contact form."
+        
   }
     
   
