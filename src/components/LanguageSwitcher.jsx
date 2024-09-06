@@ -28,7 +28,7 @@ const LanguageSwitcher = () => {
         </Tooltip>
       )}
       {currentLanguage === 'en' && (
-        <Tooltip label={t('pt')}>
+        <Tooltip label={t('pt')} placement='top'>
           <Image
             src={Brazil}
             alt="Ícone Brasil"
