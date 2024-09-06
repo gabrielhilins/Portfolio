@@ -25,8 +25,8 @@ function App() {
             <Route path='/certificates' element={<Certificates />} />
             <Route path='/experiences' element={<Experiences />} />
             <Route path='/talk' element={<Talk />} />
-            <Route path='*' element={<Pag404 />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path='*' element={<Pag404 />} />
         </Routes>
         
       </>
