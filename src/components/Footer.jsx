@@ -1,11 +1,13 @@
 import { Box, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import RealTimeClock from "./RealTimeClock";
+import AdSenseAd from "./AdSense1";
 
 const Footer = () => {
   const { t } = useTranslation();
 
   return (
+    <>
     <Box
       as="footer"
       padding="20px"
@@ -28,6 +30,8 @@ const Footer = () => {
       </Text>
       <RealTimeClock />
     </Box>
+    <AdSenseAd />
+    </>
   );
 };
 
