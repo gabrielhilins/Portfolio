@@ -34,7 +34,7 @@ const Footer = () => {
           fontWeight="300"
           paddingTop="20px"
         >
-          <Link as={RouterLink} to="/privacy-policy" isExternal>
+          <Link as={RouterLink} to="/privacy-policy">
             {t("privacyPolicy")}
           </Link>
         </Text>

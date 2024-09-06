@@ -1,13 +1,19 @@
-import { Box, Heading, Text, Alert, AlertIcon, AlertTitle, AlertDescription } from '@chakra-ui/react';
+import { Box, Heading, Text, Alert, AlertIcon, AlertTitle, AlertDescription, Flex } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from '../components/LanguageSwitcher';
+import ToolBar from '../components/ToolBar';
+
 
 function PrivacyPolicy() {
   const { t } = useTranslation();
 
   return (
     <Box p={4} display="flex" flexDirection="column" justifyContent="center">
-      <LanguageSwitcher />
+      
+      <Flex 
+      justifyContent="center"
+      >
+        <ToolBar />
+      </Flex>
       <Alert status="info" mb={4}>
         <AlertIcon />
         <Box flex="1">
