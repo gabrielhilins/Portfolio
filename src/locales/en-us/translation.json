@@ -14,6 +14,7 @@
     "certificatesTitle": "Certificates",
     "experiences": "Experiences",
     "experiencesTitle": "Experiences",
+    "graduationUnicap": "Degree in Systems for the Internet",
     "pdf": "Download PDF",
     "copyright": "© 2024 - Developed entirely by Gabriel Henrique Lins.",
     "thanks": "Thank you for stopping by :)",
@@ -83,6 +84,7 @@
     "leadership": "Leader",
     "qa_qc_pitch": "Quality Assurance (QA/QC) and Pitch Development and Presentation.",
     "voluntariado_recnplay": "Volunteering in the Rec'n'play",
+    "competencias_sistemas": "Web Development (Front-end, Back-end), Relational Databases, Algorithms, OOP, Networking, Design Thinking, Project Management, Software Engineering",
     "event_reception": "Event Reception, English Communication with Foreigners, Event Production",
     "residencia_kickoff_embarque": "Software Residency KickOff Embarque Digital 2023.1",
     "public_speaking_figma": "Public Speaking, Figma/Prototyping, Communication, Project and Group Management, Agile Methodology",
@@ -96,6 +98,12 @@
     "aboutText": "Hello! I'm a passionate developer constantly learning and growing. I specialize in back-end development with Java and Node.js. I enjoy working on innovative projects that make an impact.",
     "summaryPortfolio": "My Portfolio is a virtual showcase highlighting my journey as a Full Stack developer in training. Featuring a minimalist design and subtle yet original animations, the portfolio is fully translated into English and Portuguese, offering a visual and functional experience to explore my projects and skills.",
     "work_presentation": "Work Presentation, Oratory, Group Management, Discipline, Organization",
+    "june2023": "June 2023",
+    "june2024": "June 2024",
+    "march202325": "March 2023 - July 2025",
+    "october2023": "October 2023",
+    "december2023": "December 2023",
+    "december2022": "December 2022",
     "summaryCaremind": "Caremind Edu is an app focused on the physical and mental well-being of educators who face stress and overload in the workplace. The app offers daily self-care activities that are simple and relaxing, rewarding points upon completion. These points can be used to unlock informative articles that assist in professional and personal optimization. Additionally, Caremind Edu provides access to psychologists, allowing users to schedule sessions and receive specialized support, promoting the mental health of educators."
   }
     

@@ -5,9 +5,11 @@ import { Box, VStack, Image, useColorMode } from '@chakra-ui/react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import Cesar from '../img/cesar.png';
+import Cmr from '../img/CMR.png'
 import Porto from '../img/porto.png';
 import Rec from '../img/rec_n_play_logo 1.png';
 import Tpf from '../img/tpfengenharia_logo 1.png';
+import Unicap from '../img/Logo Catolica.png'
 import './Experiences.css';
 import './Pagination.css'
 
@@ -25,7 +27,32 @@ const Timeline = () => {
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Jun 2024"
+            date={t('march202325')}
+            icon={<Image
+              src={Unicap}
+              alt="Descrição da imagem"
+              className="timeline-icon"
+            />}
+            contentStyle={{
+              background: colorMode === "light" ? "white" : "#333",
+              color: colorMode === "light" ? "black" : "white",   
+              border: colorMode === "light" ? "2px solid black" : "2px solid white" 
+            }}
+            contentArrowStyle={{
+              borderRight: colorMode === "light" ? "7px solid white" : "7px solid #333"
+            }}
+          >
+            <div className="timeline-element-content">
+              <h3 className="timeline-element-title">{t("graduationUnicap")}</h3>
+              <h4 className="timeline-element-subtitle">UNICAP</h4>
+              <p>{t("competencias_sistemas")}</p>
+              <span className="timeline-element-date" style={dateStyle}>03/2023 - 07/2025</span>
+            </div>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={t('june2024')}
             icon={<Image
               src={Tpf}
               alt="Descrição da imagem"
@@ -50,7 +77,7 @@ const Timeline = () => {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Dez 2023"
+            date={t('december2023')}
             icon={<Image
               src={Cesar}
               alt="Descrição da imagem"
@@ -75,7 +102,7 @@ const Timeline = () => {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Out 2023"
+            date={t('october2023')}
             icon={<Image
               src={Rec}
               alt="Descrição da imagem"
@@ -100,7 +127,7 @@ const Timeline = () => {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="Jun 2023"
+            date={t('june2023')}
             icon={<Image
               src={Porto}
               alt="Descrição da imagem"
@@ -120,6 +147,31 @@ const Timeline = () => {
               <h4 className="timeline-element-subtitle">Porto Digital</h4>
               <p>{t("public_speaking_figma")}</p>
               <span className="timeline-element-date" style={dateStyle}>05/2023 - 06/2023</span>
+            </div>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date={t('december2022')}
+            icon={<Image
+              src={Cmr}
+              alt="Descrição da imagem"
+              className="timeline-icon"
+            />}
+            contentStyle={{
+              background: colorMode === "light" ? "white" : "#333",
+              color: colorMode === "light" ? "black" : "white",
+              border: colorMode === "light" ? "2px solid black" : "2px solid white"
+            }}
+            contentArrowStyle={{
+              borderRight: colorMode === "light" ? "7px solid white" : "7px solid #333"
+            }}
+          >
+            <div className="timeline-element-content">
+              <h3 className="timeline-element-title">{t("ensino_medio")}</h3>
+              <h4 className="timeline-element-subtitle">{t("cmr")}</h4>
+              <p>{t("work_presentation")}</p>
+              <span className="timeline-element-date" style={dateStyle}>01/2020 - 12/2022</span>
             </div>
           </VerticalTimelineElement>
 
