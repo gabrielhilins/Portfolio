@@ -6,7 +6,7 @@ import Projects from './pages/Projects';
 import Certificates from './pages/Certificates';
 import Experiences from './pages/Experiences';
 import Pag404 from './pages/Pag404';
-import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Talk from "./pages/Talk";
 import useColorModeBasedOnTime from './components/ColorModeBasedOnTime.jsx'
 import './App.css'
@@ -25,7 +25,7 @@ function App() {
             <Route path='/certificates' element={<Certificates />} />
             <Route path='/experiences' element={<Experiences />} />
             <Route path='/talk' element={<Talk />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             <Route path='*' element={<Pag404 />} />
         </Routes>
         
