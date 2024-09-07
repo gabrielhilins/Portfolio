@@ -106,6 +106,8 @@
     "october2023": "October 2023",
     "december2023": "December 2023",
     "december2022": "December 2022",
+    "invalidEmail": "Invalid Email",
+    "emailRequired": "Email é obrigatório",
     "privacyPolicy": "Privacy Policy",
       "adsenseAlertTitle": "AdSense Under Review",
       "adsenseAlertDescription": "Currently, the AdSense process is under review and not yet in effect. This privacy policy is valid, but it is not yet applicable at this moment. It will be implemented later once the AdSense process is completed.",

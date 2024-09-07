@@ -19,9 +19,11 @@ import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 import { IoPersonOutline } from "react-icons/io5";
 import { MdLabelImportantOutline } from "react-icons/md";
+import { HiMail } from "react-icons/hi";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
+  const [email, setEmail] = useState(""); // Novo estado para o e-mail
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({});
@@ -35,6 +37,8 @@ const ContactForm = () => {
     const newErrors = {};
 
     if (!name) newErrors.name = t("nameRequired");
+    if (!email) newErrors.email = t("emailRequired"); // Validação de e-mail se não estiver vazio
+    else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = t("invalidEmail"); // Validação de e-mail
     if (!subject) newErrors.subject = t("subjectRequired");
     if (!message) newErrors.message = t("messageRequired");
 
@@ -49,6 +53,12 @@ const ContactForm = () => {
         setName(value);
         if (errors.name) {
           setErrors((prevErrors) => ({ ...prevErrors, name: undefined }));
+        }
+        break;
+      case "email":
+        setEmail(value);
+        if (errors.email) {
+          setErrors((prevErrors) => ({ ...prevErrors, email: undefined }));
         }
         break;
       case "subject":
@@ -83,6 +93,7 @@ const ContactForm = () => {
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID, 
       {
         from_name: name,
+        from_email: email, // Incluindo o e-mail do remetente
         subject: subject,
         message: message,
       },
@@ -98,6 +109,7 @@ const ContactForm = () => {
       });
 
       setName("");
+      setEmail(""); // Limpar o campo de e-mail
       setSubject("");
       setMessage("");
 
@@ -139,6 +151,26 @@ const ContactForm = () => {
               />
             </InputGroup>
             <FormErrorMessage>{errors.name}</FormErrorMessage>
+          </FormControl>
+
+          <FormControl id="email" isRequired isInvalid={!!errors.email}>
+            <FormLabel>Email</FormLabel>
+            <InputGroup>
+              <InputLeftElement pointerEvents="none">
+                <Icon as={HiMail} color="#B60000"/>
+              </InputLeftElement>
+              <Input
+                id="email"
+                type="email"
+                value={email}
+                placeholder={t("yourEmail")}
+                fontSize={{base: "13px", md: "16px"}}
+                errorBorderColor="red.300"
+                autoComplete="off"
+                onChange={handleChange}
+              />
+            </InputGroup>
+            <FormErrorMessage>{errors.email}</FormErrorMessage>
           </FormControl>
 
           <FormControl id="subject" isRequired isInvalid={!!errors.subject}>
