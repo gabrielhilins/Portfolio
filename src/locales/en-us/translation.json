@@ -102,12 +102,14 @@
     "work_presentation": "Work Presentation, Oratory, Group Management, Discipline, Organization",
     "june2023": "June 2023",
     "june2024": "June 2024",
-    "march202325": "March 2023 - July 2025",
+    "march2023": "March 2023",
     "october2023": "October 2023",
     "december2023": "December 2023",
     "december2022": "December 2022",
     "invalidEmail": "Invalid Email",
     "emailRequired": "Email é obrigatório",
+    "Banco de Dados": "Database",
+    "Outras": "Others",
     "privacyPolicy": "Privacy Policy",
       "adsenseAlertTitle": "AdSense Under Review",
       "adsenseAlertDescription": "Currently, the AdSense process is under review and not yet in effect. This privacy policy is valid, but it is not yet applicable at this moment. It will be implemented later once the AdSense process is completed.",
@@ -124,8 +126,8 @@
       "changesHeading": "Changes to This Policy",
       "changesText": "We may update this policy occasionally. Any changes will be posted on this page.",
       "contactHeading": "Contact",
-      "contactText": "If you have any questions about this privacy policy, please contact us through our contact form."
-        
+      "contactText": "If you have any questions about this privacy policy, please contact us through our contact form.",
+      "youtube": "Click to watch the full project overview on YouTube"
   }
     
   

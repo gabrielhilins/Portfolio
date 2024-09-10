@@ -96,11 +96,13 @@
     "june2023": "Junho 2023",
     "june2024": "Junho 2024",
     "october2023": "Outubro 2023",
-    "march202325": "Março 2023 - Julho 2025",
+    "march2023": "Março 2023",
     "invalidEmail": "Email inválido",
     "emailRequired": "Email é obrigatório",
     "december2023": "Dezembro 2023",
     "december2022": "Dezembro 2022",
+    "Banco de Dados": "Banco de Dados",
+    "Outras": "Outras",
       "adsenseAlertTitle": "AdSense em Análise",
       "adsenseAlertDescription": "No momento, o processo do AdSense está em análise e ainda não está em vigor. Esta política de privacidade é válida, mas ainda não está aplicável no momento. Ela será implementada posteriormente, assim que o processo do AdSense for concluído.",
     "portfolio": "Meu Portfólio",
@@ -121,9 +123,10 @@
       "changesHeading": "Alterações nesta Política",
       "changesText": "Podemos atualizar esta política ocasionalmente. Quaisquer alterações serão publicadas nesta página.",
       "contactHeading": "Contato",
-      "contactText": "Se você tiver alguma dúvida sobre esta política de privacidade, entre em contato conosco através do nosso formulário de contato."
-    
-}
+      "contactText": "Se você tiver alguma dúvida sobre esta política de privacidade, entre em contato conosco através do nosso formulário de contato.",
+      "projectDemo": "Watch the visual demonstration of the project",
+      "youtube": "Clique para assistir a navegação completa do projeto no Youtube"
+    }
   
   
   

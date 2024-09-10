@@ -25,30 +25,6 @@ const Timeline = () => {
     <Box width="100%" maxWidth="1800px" minWidth="320px" mx="auto" px={4} py={8}>
       <VStack spacing={9} align="stretch">
         <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date={t('march202325')}
-            icon={<Image
-              src={Unicap}
-              alt="Descrição da imagem"
-              className="timeline-icon"
-            />}
-            contentStyle={{
-              background: colorMode === "light" ? "white" : "#333",
-              color: colorMode === "light" ? "black" : "white",   
-              border: colorMode === "light" ? "2px solid black" : "2px solid white" 
-            }}
-            contentArrowStyle={{
-              borderRight: colorMode === "light" ? "7px solid white" : "7px solid #333"
-            }}
-          >
-            <div className="timeline-element-content">
-              <h3 className="timeline-element-title">{t("graduationUnicap")}</h3>
-              <h4 className="timeline-element-subtitle">UNICAP</h4>
-              <p>{t("competencias_sistemas")}</p>
-              <span className="timeline-element-date" style={dateStyle}>03/2023 - 07/2025</span>
-            </div>
-          </VerticalTimelineElement>
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -149,6 +125,31 @@ const Timeline = () => {
               <span className="timeline-element-date" style={dateStyle}>05/2023 - 06/2023</span>
             </div>
           </VerticalTimelineElement>
+
+              <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                date={t('march2023')}
+                icon={<Image
+                  src={Unicap}
+                  alt="Descrição da imagem"
+                  className="timeline-icon"
+                />}
+                contentStyle={{
+                  background: colorMode === "light" ? "white" : "#333",
+                  color: colorMode === "light" ? "black" : "white",   
+                  border: colorMode === "light" ? "2px solid black" : "2px solid white" 
+                }}
+                contentArrowStyle={{
+                  borderRight: colorMode === "light" ? "7px solid white" : "7px solid #333"
+                }}
+              >
+                <div className="timeline-element-content">
+                  <h3 className="timeline-element-title">{t("graduationUnicap")}</h3>
+                  <h4 className="timeline-element-subtitle">UNICAP</h4>
+                  <p>{t("competencias_sistemas")}</p>
+                  <span className="timeline-element-date" style={dateStyle}>03/2023 - 07/2025</span>
+                </div>
+              </VerticalTimelineElement>
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"

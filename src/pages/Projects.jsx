@@ -20,13 +20,14 @@ import "swiper/css/pagination";
 import { useState } from "react";
 
 /* Importação dos Ícones*/
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaYoutube } from "react-icons/fa";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
 /*Importação dos Componentes*/
 import ToolBar from "../components/ToolBar";
 import Footer from "../components/Footer";
-import ModalRecDaTerra from "../components/ModalRecDTerra";
+import ModalPostLinkedin from "../components/ModalPostLinkedin";
+
 
 /*Importação das Imagens*/
 import MockupRec from "../img/Mockup RecDaTerra.png";
@@ -36,6 +37,8 @@ import MockupINEP from "../img/Mockup INEP.png";
 
 /*Importação da estilização da Paginação do Swiper*/
 import "./Pagination.css";
+import CustomButton from "../components/CustomButton";
+
 
 const Projects = () => {
   const { t } = useTranslation();
@@ -44,6 +47,11 @@ const Projects = () => {
 
   const openRecDaTerraModal = () => setIsModalOpen(true);
 
+  const marvelURL = "https://youtu.be/QvnORPjHWNM";
+  const inepURL = "https://youtu.be/76q_v6AGyF0";
+  const portfolioURL = "https://youtu.be/lBk3A0VT8o8";
+  const recDaTerraURL = "https://youtu.be/45haHOWVpSA";
+
   const projectData = [
     {
       title: t("marvel"),
@@ -51,6 +59,9 @@ const Projects = () => {
       summary: t("summaryMarvel"),
       imageSrc: MockupMarvel,
       imageAlt: "Mockup do Projeto Marvel Characters",
+      videoURL: marvelURL,
+      hoverBackgroundColor: "#2D2626",
+      hoverBorderColor: "#EA2D2E",
       techUsed: [
         {
           src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
@@ -93,6 +104,10 @@ const Projects = () => {
       summary: t("summaryRecDaTerra"),
       imageSrc: MockupRec,
       imageAlt: "Mockup do Projeto Rec Da Terra",
+      videoURL: recDaTerraURL,
+      hoverBackgroundColor: "#76603F",
+      hoverBorderColor: "#98FF68",
+      linkedinPost: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7237646199963480065",
       techUsed: [
         {
           src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
@@ -136,6 +151,9 @@ const Projects = () => {
       summary: t("summaryINEP"),
       imageSrc: MockupINEP,
       imageAlt: "Mockup do Projeto Dashboard INEP",
+      videoURL: inepURL,
+      hoverBackgroundColor: "white",
+      hoverBorderColor: "#9BB0E5",
       techUsed: [
         {
           src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg",
@@ -179,6 +197,10 @@ const Projects = () => {
       summary: t("summaryPortfolio"),
       imageSrc: MockupPorfolio,
       imageAlt: "Mockup do meu Portfolio",
+      videoURL: portfolioURL,
+      hoverBackgroundColor: "#6C63FF",
+      hoverBorderColor: "#white",
+      linkedinPost: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7237957324441567233",
       techUsed: [
         {
           src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
@@ -315,31 +337,16 @@ const Projects = () => {
                   gap="15px"
                   mb="15px" // Margem inferior para separar os botões
                   justifyContent="center"
+                  flexWrap="wrap" // Permite quebra de linha em dispositivos menores
                 >
-                  <Button
-                    bg="linear-gradient(90deg, #6C63FF 0%, #B60000 100%)"
-                    color="white"
-                    px={{ base: "8px", sm: "12px", md: "20px" }}
-                    py={{ base: "4px", sm: "6px", md: "10px" }}
-                    minW={{ base: "120px", md: "160px" }}
-                    borderRadius="md"
-                    gap="8px"
-                    as="a"
+                  <CustomButton
                     href={project.projectWebsite}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    width={{ base: "60px", sm: "100px", md: "160px" }}
-                    fontSize={{ base: "12px", sm: "14px", md: "16px" }}
-                    _hover={{
-                      bg: "#444444",
-                      color: "#FF6B6B",
-                      border: "1px solid",
-                      borderColor: "#FF6B6B"
-                    }}
+                    hoverBackgroundColor={project.hoverBackgroundColor}
+                    hoverBorderColor={project.hoverBorderColor}
                   >
                     <Icon as={FaArrowUpRightFromSquare} />
                     {t("projectWebsite")}
-                  </Button>
+                  </CustomButton>
                   <Button
                     border={`1px solid ${repoButtonBorderColor}`}
                     color={repoButtonTextColor}
@@ -367,11 +374,8 @@ const Projects = () => {
                     {t("repo")}
                   </Button>
                 </Box>
-                {project.title === "RecDaTerra" && (
-                  <Box
-                    display="flex"
-                    justifyContent="center" // Centraliza o botão horizontalmente
-                  >
+                {project.linkedinPost && (
+                  <Box display="flex" justifyContent="center">
                     <Button
                       bgColor="#0077B5"
                       color="white"
@@ -381,67 +385,73 @@ const Projects = () => {
                       borderRadius="md"
                       gap="8px"
                       as="button"
-                      onClick={openRecDaTerraModal}
+                      onClick={() => setIsModalOpen(true)}
                       width={{ base: "60px", sm: "100px", md: "160px" }}
                       fontSize={{ base: "12px", sm: "14px", md: "16px" }}
                       _hover={{
                         bg: "white",
                         color: "#0077B5",
                         border: "1px solid",
-                        borderColor: "#0077B5"
+                        borderColor: "#0077B5",
                       }}
                     >
                       <Icon as={FaLinkedin} />
                       {t("postLinkedin")}
                     </Button>
+                    {/* Modal dinâmico baseado na existência de linkedinPost */}
+                    {project.linkedinPost && (
+                      <ModalPostLinkedin
+                        isOpen={isModalOpen}
+                        onClose={() => setIsModalOpen(false)}
+                        linkedinPostUrl={project.linkedinPost} // Passa o URL do post do LinkedIn
+                      />
+                    )}
                   </Box>
                 )}
-              </Box>
 
-              {project.title === "RecDaTerra" && (
-                <ModalRecDaTerra
-                  isOpen={isModalOpen}
-                  onClose={() => setIsModalOpen(false)}
-                />
-              )}
-              <Text fontSize={{ base: "10px", md: "14px" }} paddingTop="20px">
-                {t("teamMembers")}
-              </Text>
-              <Text
-                fontSize={{ base: "10px", md: "14px" }}
-                padding={{ base: "15px", md: "0px" }}
-              >
-                {project.teamMembers.split(",").map((name, index) => {
-                  const trimmedName = name.trim();
-                  return trimmedName === "Gabriel Henrique" ? (
-                    <a
-                      href="https://www.linkedin.com/in/gabriel-henrique-lins"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      key={index}
-                    >
-                      <strong>
+                <Text fontSize={{ base: "10px", md: "14px" }} paddingTop="20px">
+                  {t("teamMembers")}
+                </Text>
+                <Text
+                  fontSize={{ base: "10px", md: "14px" }}
+                  padding={{ base: "0", md: "0px" }}
+                >
+                  {project.teamMembers.split(",").map((name, index) => {
+                    const trimmedName = name.trim();
+                    return trimmedName === "Gabriel Henrique" ? (
+                      <a
+                        href="https://www.linkedin.com/in/gabriel-henrique-lins"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        key={index}
+                      >
+                        <strong>
+                          {trimmedName}
+                          {index < project.teamMembers.split(",").length - 1
+                            ? ", "
+                            : ""}
+                        </strong>
+                      </a>
+                    ) : (
+                      <span key={index}>
                         {trimmedName}
                         {index < project.teamMembers.split(",").length - 1
                           ? ", "
                           : ""}
-                      </strong>
-                    </a>
-                  ) : (
-                    <span key={index}>
-                      {trimmedName}
-                      {index < project.teamMembers.split(",").length - 1
-                        ? ", "
-                        : ""}
-                    </span>
-                  );
-                })}
-              </Text>
+                      </span>
+                    );
+                  })}
+                </Text>
+              </Box>
             </VStack>
           </Box>
 
           {/* Lado Direito */}
           <Box
+            as="a"
+            href={project.videoURL}
+            target="_blank"
+            rel="noopener noreferrer"
             width={{ base: "100%", md: "50%" }}
             padding="15px"
             display="flex"
@@ -449,6 +459,8 @@ const Projects = () => {
             alignItems="center"
             justifyContent="center"
             borderRadius="15px"
+            _hover={{ transform: "scale(1.1)" }}
+            transition="transform 0.3s ease"
           >
             <Image
               src={project.imageSrc}
@@ -456,7 +468,24 @@ const Projects = () => {
               width={{ base: "80%", md: "100%" }} // Ajustado para responsividade
               maxWidth="500px"
               height="auto"
+              borderRadius="md"
+              cursor="pointer"
             />
+            <Box
+              display="flex"
+              flexDirection="row"
+              gap="12px"
+              justifyContent="center"
+              alignItems="center"
+            >
+              <Icon as={FaYoutube} color="#FF0000" />
+              <Text
+                fontSize={{ base: "6px", md: "10px" }}
+                textDecoration="underline"
+              >
+                {t("youtube")}
+              </Text>
+            </Box>
           </Box>
         </Box>
       </Flex>

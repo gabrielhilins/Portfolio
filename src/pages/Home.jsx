@@ -100,7 +100,7 @@ function Home() {
             onClick={onOpenAboutMe} // Abre o modal
             cursor="pointer"
             _hover={{
-              color: "#B60000",
+              color: "#FF6868",
               transition: "color 0.2s ease-in-out",
               textDecoration: "underline"
             }}
@@ -252,8 +252,6 @@ function Home() {
               display="flex"
               flexWrap="wrap"
               gap="10px"
-              justifyContent="center"
-              animation="floating 3s ease-in-out infinite"
             >
               <TechLogos />
             </Box>

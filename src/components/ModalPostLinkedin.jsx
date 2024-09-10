@@ -11,7 +11,7 @@ import {
   import { useTranslation } from "react-i18next";
   import { useEffect } from "react";
   
-  const ModalRecDaTerra = ({ isOpen, onClose }) => {
+  const ModalPostLinkedin = ({ isOpen, onClose, linkedinPostUrl }) => {
     const { t } = useTranslation();
   
     useEffect(() => {
@@ -26,7 +26,7 @@ import {
     }, [isOpen]);
   
     const handleRedirect = () => {
-      window.open("https://www.linkedin.com/feed/update/urn:li:ugcPost:7237646199963480065", "_blank");
+      window.open(linkedinPostUrl, "_blank");
     };
   
     return (
@@ -37,7 +37,7 @@ import {
           <ModalCloseButton />
           <ModalBody display="flex" justifyContent="center" p={0} overflow="hidden">
             <iframe
-              src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7237646199963480065"
+              src={linkedinPostUrl}
               height="600"
               width="100%"
               frameBorder="0"
@@ -56,5 +56,5 @@ import {
     );
   };
   
-  export default ModalRecDaTerra;
+  export default ModalPostLinkedin;
   
