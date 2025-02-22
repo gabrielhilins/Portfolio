@@ -97,12 +97,12 @@ function Home() {
             fontSize={{ base: "18px", sm: "20px" }}
             fontWeight="700"
             paddingTop="5px"
+            textDecoration="underline"
             onClick={onOpenAboutMe} // Abre o modal
             cursor="pointer"
             _hover={{
-              color: "#FF6868",
-              transition: "color 0.2s ease-in-out",
-              textDecoration: "underline"
+              transform: "scale(1.05) translateY(-5px)", 
+                transition: "transform 0.3s ease", 
             }}
           >
             {t("name")}
@@ -190,13 +190,7 @@ function Home() {
 
             <ModalResume isOpen={isOpenResume} onClose={onCloseResume} />
           </Box>
-          <Text
-            fontSize={{ base: "16px", sm: "18px" }}
-            fontWeight="400"
-            paddingTop="20px"
-          >
-            {t("subtitle")}
-          </Text>
+          
           <Box
             textAlign="center"
             mt="40px"

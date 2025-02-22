@@ -14,7 +14,20 @@ const LanguageSwitcher = () => {
   return (
     <Flex>
       {currentLanguage === 'pt' && (
-        <Tooltip label={t('en')} placement="top">
+        <Tooltip label={t('en')} placement='top'>
+          <Image
+            src={Brazil}
+            alt="Ícone Brasil"
+            height="32px"
+            width="32px"
+            marginBottom={{ base: "10px", sm: "0" }}
+            onClick={() => handleLanguageChange('en')}
+            cursor="pointer"
+          />
+        </Tooltip>
+      )}
+      {currentLanguage === 'en' && (
+        <Tooltip label={t('pt')} placement="top">
           <Image
             src={Usa}
             alt="Ícone EUA"
@@ -22,19 +35,6 @@ const LanguageSwitcher = () => {
             width="32px"
             marginBottom={{ base: "10px", sm: "0" }}
             marginRight={{ sm: "10px" }}
-            onClick={() => handleLanguageChange('en')}
-            cursor="pointer"
-          />
-        </Tooltip>
-      )}
-      {currentLanguage === 'en' && (
-        <Tooltip label={t('pt')} placement='top'>
-          <Image
-            src={Brazil}
-            alt="Ícone Brasil"
-            height="32px"
-            width="32px"
-            marginBottom={{ base: "10px", sm: "0" }}
             onClick={() => handleLanguageChange('pt')}
             cursor="pointer"
           />

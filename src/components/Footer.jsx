@@ -1,8 +1,6 @@
-import { Box, Text, Link } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import RealTimeClock from "./RealTimeClock";
-import AdSenseAd from "./AdSense1";
-import { Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -34,13 +32,9 @@ const Footer = () => {
           fontWeight="300"
           paddingTop="20px"
         >
-          <Link as={RouterLink} to="/privacy-policy">
-            {t("privacyPolicy")}
-          </Link>
         </Text>
         <RealTimeClock />
       </Box>
-      <AdSenseAd />
     </>
   );
 };
