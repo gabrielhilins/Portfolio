@@ -14,19 +14,19 @@ import { useTranslation } from 'react-i18next';
 const ModalResume = ({ isOpen, onClose }) => {
   const { t, i18n } = useTranslation();
 
-  const urlCurriculo = "https://drive.google.com/file/d/1wMj0HJa55gZHaYwfhV_FcUTx48_f0OHB/preview";
-  const urlCurriculoEmPdf = "https://drive.google.com/uc?export=download&id=1wOKdpZmpZomUZ5psNd5ZScn3otbN464X";
+  const curriculoPTURL = "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/pub?embedded=true";
+  const pdfCurriculoPTURL = "https://docs.google.com/document/d/1sc9UWKLyZEcTQIUAUYoWo0BrBVBuwwtoE7-M7I8bxDk/export?format=pdf";
   
-  const urlResume = "https://drive.google.com/file/d/1wOKdpZmpZomUZ5psNd5ZScn3otbN464X/preview";
-  const urlResumeInPdf = "https://drive.google.com/uc?export=download&id=1wOKdpZmpZomUZ5psNd5ZScn3otbN464X";
+  const curriculoENURL = "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/pub?embedded=true";
+  const pdfCurriculoENURL = "https://docs.google.com/document/d/1sSgFU1u_diYgDnnpqVwuKLdlw5nwr7wee0tjY90Swsk/export?format=pdf";
 
   // Função para obter o URL do currículo com base no idioma
   const getCurriculoURL = () => {
-    return i18n.language === 'en' ? urlResume : urlCurriculo;
+    return i18n.language === 'en' ? curriculoENURL : curriculoPTURL;
   };
 
   const getPdfCurriculoURL = () => {
-    return i18n.language === 'en' ? urlResumeInPdf : urlCurriculoEmPdf;
+    return i18n.language === 'en' ? pdfCurriculoENURL : pdfCurriculoPTURL;
   };
 
   return (
