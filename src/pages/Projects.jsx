@@ -34,6 +34,7 @@ import MockupRec from "../img/Mockup RecDaTerra.png";
 import MockupMarvel from "../img/Mockup Marvel.png";
 import MockupPorfolio from "../img/Mockup Portfolio.png";
 import MockupINEP from "../img/Mockup INEP.png";
+import MockupReal from '../img/Mockup Real.png'
 
 /*Importação da estilização da Paginação do Swiper*/
 import "./Pagination.css";
@@ -51,8 +52,54 @@ const Projects = () => {
   const inepURL = "https://youtu.be/76q_v6AGyF0";
   const portfolioURL = "https://youtu.be/lBk3A0VT8o8";
   const recDaTerraURL = "https://youtu.be/45haHOWVpSA";
+  const realURL = "https://youtu.be/QKdFy5DQ0DI";
 
   const projectData = [
+    {
+      title: t("real"),
+      description: t("nameProject"),
+      summary: t("summaryReal"),
+      imageSrc: MockupReal,
+      imageAlt: "Mockup do REAL Simulador de Orçamentos",
+      videoURL: realURL,
+      hoverBackgroundColor: "#00C49A",
+      hoverBorderColor: "#FFFFFF",
+      techUsed: [
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain-wordmark.svg",
+          alt: "HTML",
+          width: "30px", // Ajustado para responsividade
+          description: "HTML",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain-wordmark.svg",
+          alt: "CSS",
+          width: "30px", // Ajustado para responsividade
+          description: "CSS",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+          alt: "JavaScript",
+          width: "30px", // Ajustado para responsividade
+          description: "JavaScript",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg",
+          alt: "Vite",
+          width: "30px", // Ajustado para responsividade
+          description: "Vite",
+        },
+        {
+          src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg",
+          alt: "Vercel",
+          width: "30px", // Ajustado para responsividade
+          description: "Vercel",
+        },
+      ],
+      teamMembers: "Gabriel Henrique",
+      projectWebsite: "https://real-iota-ivory.vercel.app/",
+      repo: "https://github.com/gabrielhilins/REAL_landing_page",
+    },
     {
       title: t("marvel"),
       description: t("nameProject"),
