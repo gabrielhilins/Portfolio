@@ -29,7 +29,7 @@ const Links = () => {
     {
       id: 1,
       title: "Meu Portfólio Pessoal",
-      url: "/",
+      url: "/home",
       icon: MdWork,
       color: colorMode === "light" ? "#6C63FF" : "#2E24D3",
       highlight: true,

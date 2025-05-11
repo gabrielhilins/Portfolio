@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { 
     Modal,
     ModalOverlay,
@@ -14,7 +15,7 @@ import { useTranslation } from 'react-i18next';
 import MeuVetor from '../img/Vetor Meu.png';
 
 const ModalAboutMe = ({ isOpen, onClose }) => {
-    const { t, i18n } = useTranslation();
+    const { i18n } = useTranslation();
     const { colorMode } = useColorMode();
     
     // Definição do texto diretamente no componente para fins de teste

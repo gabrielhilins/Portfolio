@@ -8,7 +8,7 @@ function Pag404() {
   const navigate = useNavigate();
 
   const handleHomeClick = () => {
-    navigate("/"); // Redireciona para a home
+    navigate("/home"); // Redireciona para a home
   };
 
   return (

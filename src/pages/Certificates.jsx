@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /*Importação de Módulos e seus componentees*/
 import { useEffect, useState} from "react";
 import { Box, Flex, useColorMode, Image, Text, VStack, Button, Icon, useColorModeValue } from "@chakra-ui/react";

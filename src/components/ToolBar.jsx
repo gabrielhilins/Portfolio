@@ -1,4 +1,4 @@
-import { Box, Icon, Link, Tooltip, useColorModeValue, useColorMode } from "@chakra-ui/react";
+import { Box, Icon, Link, Tooltip, useColorMode } from "@chakra-ui/react";
 import { Link as RouterLink } from 'react-router-dom';
 import LanguageSwitcher from "./LanguageSwitcher";
 import { FaHome } from "react-icons/fa";
@@ -23,7 +23,7 @@ const ToolBar = () => {
             marginBottom="50px"
         >
             <Tooltip label={t("home")} aria-label={t("home")} placement="top">
-                <Link as={RouterLink} to="/">
+                <Link as={RouterLink} to="/home">
                     <Icon
                         as={FaHome}
                         height="32px"
