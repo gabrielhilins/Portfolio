@@ -11,6 +11,7 @@ import {
   import { useTranslation } from "react-i18next";
   import { useEffect } from "react";
   
+  // eslint-disable-next-line react/prop-types
   const ModalPostLinkedin = ({ isOpen, onClose, linkedinPostUrl }) => {
     const { t } = useTranslation();
   

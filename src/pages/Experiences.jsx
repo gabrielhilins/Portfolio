@@ -95,7 +95,7 @@ const Timeline = () => {
           >
             <div className="timeline-element-content">
               <h3 className="timeline-element-title">{t("voluntariado_recnplay")}</h3>
-              <h4 className="timeline-element-subtitle">Rec'n'play</h4>
+              <h4 className="timeline-element-subtitle">Rec&apos;n&apos;play</h4>
               <p>{t("event_reception")}</p>
               <span className="timeline-element-date" style={dateStyle}>10/2023</span>
             </div>

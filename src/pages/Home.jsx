@@ -33,7 +33,7 @@ import SoftSkills from "../components/SoftSkills";
 import ModalAboutMe from "../components/ModalAboutMe";
 
 function Home() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const {
     isOpen: isOpenResume,
     onOpen: onOpenResume,
@@ -46,7 +46,7 @@ function Home() {
     onClose: onCloseAboutMe,
   } = useDisclosure(); // Para Modal About Me
 
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
 
   return (
@@ -59,7 +59,7 @@ function Home() {
         alignItems="center"
       >
         <Box
-          width={{ base: "100%", sm: "90%", md: "80%", lg: "453px" }} // Ajuste responsivo
+         width={{ base: "100%", sm: "90%", md: "80%", lg: "600px" }}
           maxWidth="100%"
           backgroundColor={colorMode === "light" ? "white" : "#1D1C1C"}
           padding="15px"

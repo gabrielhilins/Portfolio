@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Talk from "./pages/Talk";
 import useColorModeBasedOnTime from './components/ColorModeBasedOnTime.jsx'
 import './App.css'
+import Links from "./pages/Links.jsx";
 
 
 
@@ -21,6 +22,7 @@ function App() {
      
         <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/links' element={<Links />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/certificates' element={<Certificates />} />
             <Route path='/experiences' element={<Experiences />} />

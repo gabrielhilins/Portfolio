@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   Box,
   Flex,
@@ -43,10 +44,9 @@ import CustomButton from "../components/CustomButton";
 
 const Projects = () => {
   const { t } = useTranslation();
-  const { colorMode } = useColorMode();
+  useColorMode();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openRecDaTerraModal = () => setIsModalOpen(true);
 
   const marvelURL = "https://youtu.be/QvnORPjHWNM";
   const inepURL = "https://youtu.be/76q_v6AGyF0";
