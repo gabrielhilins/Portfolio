@@ -28,7 +28,7 @@ const Links = () => {
   const agencyLinks = [
     {
       id: 1,
-      title: "Meu Portfólio Pessoal",
+      title: "Meu Portfólio Profissional",
       url: "/home",
       icon: MdWork,
       color: colorMode === "light" ? "#6C63FF" : "#2E24D3",
@@ -60,7 +60,7 @@ const Links = () => {
     },
     {
       id: 5,
-      title: "Site da minha agência de Tech & design",
+      title: "Site da minha agência de Tech & Design",
       url: "https://www.ggabstechdesign.com.br/",
       icon: FaGlobe,
       color: colorMode === "light" ? "#6C63FF" : "#2E24D3",
