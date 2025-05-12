@@ -117,14 +117,14 @@ const Links = () => {
             >
               Gabriel Henrique Lins
             </Heading>
-            <Text fontSize={{ base: "12px", sm: "14px", md: "16px" }} color="gray.600">
+            <Text fontSize={{ base: "12px", sm: "14px", md: "16px" }} color="gray.400">
               Desenvolvedor Full Stack e Fundador da{" "}
               <Link
                 href="https://www.ggabstechdesign.com.br/"
                 isExternal
                 target="_blank"
                 rel="noopener noreferrer"
-                color="gray.600"
+                color="gray.400"
                 textDecoration="underline"
                 _hover={{
                   color: colorMode === "light" ? "#6C63FF" : "#2E24D3",
@@ -182,7 +182,7 @@ const Links = () => {
                         ? "white"
                         : colorMode === "light"
                         ? "black"
-                        : "#2E24D3"
+                        : "white"
                     }
                   >
                     {link.title}
